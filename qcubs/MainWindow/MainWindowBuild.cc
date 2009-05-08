@@ -43,7 +43,9 @@ MainWindow::compile(const QString& fileName)
 {
 	QString exe = "/home/pingu/projects/cubs/cubs/minicompil";
 	_process.setReadChannelMode(QProcess::MergedChannels);
-	_process.start(exe, QStringList() << "-X" << fileName);
+	//_process.start(exe, QStringList() << "-X" << fileName);
+	_process.start("yes");
+	_dialogWait.setActiveProcess(_process);
 	_dialogWait.show();
 }
 

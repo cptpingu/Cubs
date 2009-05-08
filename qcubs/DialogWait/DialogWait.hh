@@ -1,7 +1,8 @@
-#ifndef DIALOGWAIT_HH
-#define DIALOGWAIT_HH
+#ifndef DIALOGWAIT_HH_
+#define DIALOGWAIT_HH_
 
-#include <QtGui/QDialog>
+# include <QtGui/QDialog>
+# include <QProcess>
 
 namespace Ui
 {
@@ -15,12 +16,17 @@ class DialogWait : public QDialog
 public:
 	explicit DialogWait(QWidget* parent = 0);
 	virtual ~DialogWait();
+	void setActiveProcess(QProcess& process);
 
 protected:
 	virtual void changeEvent(QEvent* e);
 
+protected slots:
+	void onCancel();
+
 private:
 	Ui::DialogWait* ui;
+	QProcess* _process;
 };
 
-#endif // DIALOGWAIT_HH
+#endif /* !DIALOGWAIT_HH_ */

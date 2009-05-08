@@ -22,13 +22,13 @@ protected:
 
 public slots:
 	void newFile();
-	void open();
+	bool open();
 	bool save();
 	bool saveAs();
 	void documentWasModified();
 
 	bool maybeSave();
-	void loadFile(const QString& fileName);
+	bool loadFile(const QString& fileName);
 	bool saveFile(const QString& fileName);
 	void setCurrentFile(const QString& fileName);
 	static QString strippedName(const QString& fullFileName);

@@ -8,7 +8,7 @@
 ** @return pouet
 */
 MainWindow::MainWindow(QWidget *parent)
-	: QMainWindow(parent), ui(new Ui::MainWindow)
+	: QMainWindow(parent), ui(new Ui::MainWindow), _dialogWait(parent)
 {
 	ui->setupUi(this);
 	setupEditor();
@@ -26,7 +26,7 @@ MainWindow::setupEditor()
 	ui->actionCut->setEnabled(false);
 	ui->actionCopy->setEnabled(false);
 
-	// TODO: Se souvenir de tout les fichiers ouverts précedemme
+	// TODO: Se souvenir de tout les fichiers ouverts précedemment
 	ui->textEdit->loadFile("check/test.mmc");
 }
 
@@ -53,7 +53,8 @@ MainWindow::setupAction()
 void
 MainWindow::onOpen()
 {
-	ui->textEdit->open();
+	if (ui->textEdit->open())
+		statusBar()->showMessage(tr("File loaded"), 2000);
 }
 
 void
@@ -71,7 +72,8 @@ MainWindow::onNew()
 void
 MainWindow::onSave()
 {
-	ui->textEdit->save();
+	if (ui->textEdit->save())
+		statusBar()->showMessage(tr("File saved"), 2000);
 }
 
 void
@@ -112,5 +114,5 @@ MainWindow::onAbout()
 void
 MainWindow::onAboutQt()
 {
+	QApplication::aboutQt();
 }
-

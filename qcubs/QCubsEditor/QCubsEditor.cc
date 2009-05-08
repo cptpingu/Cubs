@@ -69,15 +69,16 @@ QCubsEditor::getSavedFile(QString& file)
 	return false;
 }
 
-void
+bool
 QCubsEditor::open()
 {
 	if (maybeSave())
 	{
 		QString fileName = QFileDialog::getOpenFileName(this);
 		if (!fileName.isEmpty())
-			loadFile(fileName);
+			return loadFile(fileName);
 	}
+	return false;
 }
 
 bool
@@ -101,7 +102,7 @@ QCubsEditor::saveAs()
 void
 QCubsEditor::documentWasModified()
 {
-	//setWindowModified(isModified());
+	setWindowModified(document()->isModified());
 }
 
 bool
@@ -123,7 +124,7 @@ QCubsEditor::maybeSave()
 	return true;
 }
 
-void
+bool
 QCubsEditor::loadFile(const QString& fileName)
 {
 	QFile file(fileName);
@@ -133,7 +134,7 @@ QCubsEditor::loadFile(const QString& fileName)
 							 tr("Cannot read file %1:\n%2.")
 							 .arg(fileName)
 							 .arg(file.errorString()));
-		return;
+		return false;
 	}
 
 	QTextStream in(&file);
@@ -142,7 +143,7 @@ QCubsEditor::loadFile(const QString& fileName)
 	QApplication::restoreOverrideCursor();
 
 	setCurrentFile(fileName);
-	//statusBar()->showMessage(tr("File loaded"), 2000);
+	return true;
 }
 
 bool
@@ -164,7 +165,6 @@ QCubsEditor::saveFile(const QString& fileName)
 	QApplication::restoreOverrideCursor();
 
 	setCurrentFile(fileName);
-	//statusBar()->showMessage(tr("File saved"), 2000);
 	return true;
 }
 

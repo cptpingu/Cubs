@@ -1,0 +1,9 @@
+#!/bin/cub
+#0
+#--
+#2
+#--
+begin
+  print(100 % 7);
+  print("\n");
+end

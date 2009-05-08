@@ -1,0 +1,7 @@
+#!/bin/cub
+#0
+#--
+#--
+var a, b, c : integer;
+var f : string;
+var truc : string;

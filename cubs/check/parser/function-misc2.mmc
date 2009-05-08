@@ -1,0 +1,16 @@
+#!/bin/cub
+#5
+#--
+#--
+function test_this_function (a: integer; d,e,f:string ) : integer;
+var local_a, local_b : integer;
+var local_f : string;
+begin
+  a = 34;
+  b = my_func(0, "hello", "str3", "str4");
+  nothing();
+     printf ("cooucou");
+     return "kikoo";
+  local_b = (55 * 56) + 37;
+  local_f = "cou" + "cou";
+end

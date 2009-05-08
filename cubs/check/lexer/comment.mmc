@@ -1,0 +1,11 @@
+#!/bin/cub
+#0
+#--
+#--
+
+// this is a comment
+var a : integer;
+
+begin
+  a = 9;
+end

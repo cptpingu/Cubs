@@ -1,0 +1,11 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+var b : integer;
+
+begin
+  a = 12;
+  b = a;
+end

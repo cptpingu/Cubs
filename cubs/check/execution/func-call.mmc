@@ -1,0 +1,16 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+function identity (i : integer) : integer;
+begin
+  i = a;
+  return i;
+end
+
+begin
+  a = 5;
+  a = identity(45);
+end

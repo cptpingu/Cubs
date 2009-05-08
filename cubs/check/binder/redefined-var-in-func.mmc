@@ -1,0 +1,7 @@
+#!/bin/cub
+#5
+#--
+#--
+function foo(a : integer; a : string) : boolean;
+begin
+end

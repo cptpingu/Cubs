@@ -1,0 +1,7 @@
+#!/bin/cub
+#0
+#--
+#--
+function my_func (a: integer; b : string) : integer;
+begin
+end

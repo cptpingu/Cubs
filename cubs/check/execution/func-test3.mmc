@@ -1,0 +1,28 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+function factorielle1 (nb : integer) : integer;
+begin
+   if (nb <= 1) then
+   begin
+     return 1;
+   end
+   return nb * factorielle2(nb - 1);
+end
+
+
+function factorielle2 (nb : integer) : integer;
+begin
+   if (nb <= 1) then
+   begin
+     return 1;
+   end
+   return nb * factorielle1(nb - 1);
+end
+
+begin
+  a = factorielle1(5);
+end

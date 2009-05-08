@@ -1,0 +1,13 @@
+#!/bin/cub
+#0
+#--
+#--
+var i : integer;
+
+begin
+  i = 0;
+  if i < 10 then
+  begin
+    i = i + 1;
+  end
+end

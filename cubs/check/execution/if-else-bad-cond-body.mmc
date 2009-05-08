@@ -1,0 +1,17 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+begin
+  a = 4;
+  if 5 <= 3 then
+  begin
+    a = 8;
+  end
+  else
+  begin
+    a = 118;
+  end
+end

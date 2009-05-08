@@ -1,0 +1,23 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+function doubledouble (nb : integer) : integer;
+begin
+   return nb * 2;
+end
+
+function double (nb : integer) : integer;
+begin
+   return 2 * doubledouble(nb *2);
+end
+
+begin
+  a = double(1);
+  a = double(2);
+  a = double(3);
+  a = double(4);
+  a = double(5);
+end

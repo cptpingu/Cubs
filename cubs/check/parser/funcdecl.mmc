@@ -1,0 +1,9 @@
+#!/bin/cub
+#0
+#--
+#--
+function my_func (a: integer; d,e,f:string) : integer;
+var local_a, local_b : integer;
+var local_f : string;
+begin
+end

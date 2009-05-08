@@ -1,0 +1,10 @@
+#!/bin/cub
+#5
+#--
+#--
+begin
+  truc = " et \\\\\\encor\\\e un \" \\un\\ test\tess\n";
+  print (test_this_function(42, "42", "quarante-deux", "Forty Two"));
+  // This is a comment test
+  return 0;
+end

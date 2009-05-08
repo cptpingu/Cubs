@@ -1,0 +1,11 @@
+#!/bin/cub
+#4
+#--
+#--
+function print(a : integer) : boolean;
+begin
+end
+
+begin
+  print(0);
+end

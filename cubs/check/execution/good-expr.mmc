@@ -1,0 +1,9 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+begin
+  a = 2000 / (5 + (5 + 42));
+end

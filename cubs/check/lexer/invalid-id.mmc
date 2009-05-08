@@ -1,0 +1,9 @@
+#!/bin/cub
+#3
+#--
+#--
+var _a : integer:
+
+begin
+  _a = 0;
+end

@@ -1,0 +1,44 @@
+#!/bin/cub
+#5
+#--
+#--
+	var id : integer;
+	var id : integer;
+	function id() : integer;
+	var id, id, id, id, id : integer;
+	var id, id, id : integer;
+	var id : integer;
+	var id : integer;
+	var id : integer;
+	var id : integer;
+	begin
+		return id(id(), id, 42, id, id(id() + id(), id()) + id(id("String Expression" + id))) + id;
+	end
+	function id(id : integer) : integer;
+	begin
+		id();
+	end
+	function id() : integer;
+	var id : integer;
+	var id : integer;
+	begin
+		id = id(id(id, id + id(), 42, id(id(id) + id("String Expression" + id(id() + id(id, id() + id, id + id("String Expression" + id))), id())) + id()) + id, 42 + id);
+		id = id() + id;
+		id = id + id(id() + (id()), id());
+	end
+	function id(id, id : integer; id, id : integer; id, id : integer) : integer;
+	var id : integer;
+	var id, id : integer;
+	var id : integer;
+	begin
+		id = ("String Expression" + id(id(), id(), id, 42)) + id();
+		id = id + id;
+	end
+	function id() : integer;
+	begin
+		id = id();
+	end
+	begin
+		id = id(id) + id();
+		id = id();
+	end

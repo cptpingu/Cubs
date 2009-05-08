@@ -1,0 +1,49 @@
+* do/undo (desactiver ctrl + z automatique)
+* Titre de fenetre qui se met à jour
+* Select all
+* Bug avec save ?
+* Recherche
+* Find/replace
+* Find dans tout les fichiers
+* Filtre *.mmc par défaut
+
+* Drag'n'drop dans une fenêtre
+* Aller à la ligne
+* Affichage, ligne, colonnes
+
+* Fichier récemment ouvert
+
+* onglet
+
+* Une seule instance possible ?
+
+* Numérotation des lignes
+* Affichage barre des 80 colonnes
+* Complétion
+* Comment/Uncomment
+
+== Compilation ==
+
+* Choix du nom de l'executable
+* Interpréter
+* Reformater
+* Voir étape:
+- Lexing
+- Binding
+- Type Checking
+- Execution (les différents types).
+* Conversion en d'autre langage.
+
+== i18n ==
+
+- Anglais
+- Francais
+
+== Configuration ==
+
+* Style import / export
+* Choix fonte / taille / police / style
+* Choix coloration syntaxique
+* Chemin du compilo
+* Personnalisation des différentes lignes de commande
+* Associé *.mmc avec cette application

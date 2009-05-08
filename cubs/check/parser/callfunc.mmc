@@ -1,0 +1,7 @@
+#!/bin/cub
+#5
+#--
+#--
+begin
+ func(0);
+end

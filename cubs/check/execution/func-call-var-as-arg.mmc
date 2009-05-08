@@ -1,0 +1,16 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+var c : integer;
+
+function double (b : integer) : integer;
+begin
+  return b * 2;
+end
+
+begin
+  a = 3;
+  c = double (a + 2);
+end

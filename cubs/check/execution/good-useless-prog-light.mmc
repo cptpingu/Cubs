@@ -1,0 +1,16 @@
+#!/bin/cub
+#0
+#--
+#--
+
+function test_this_function () : integer;
+begin
+  while 34 == 34 do
+  begin
+    return 0;
+  end
+end
+
+begin
+  test_this_function();
+end

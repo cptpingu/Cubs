@@ -1,0 +1,7 @@
+#!/bin/cub
+#9
+#--
+#--
+begin
+  exit 9;
+end

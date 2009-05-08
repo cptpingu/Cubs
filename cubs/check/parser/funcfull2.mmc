@@ -1,0 +1,16 @@
+#!/bin/cub
+#5
+#--
+#--
+function test_this_function () : integer;
+begin
+  begin
+    if a == b then
+    begin
+      printf ("cooucou");
+      return "kikoo";
+    end
+  end
+  local_b = (55 * 56) + 37;
+  local_f = "cou" + "cou";
+end

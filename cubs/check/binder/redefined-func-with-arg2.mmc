@@ -1,0 +1,9 @@
+#!/bin/cub
+#0
+#--
+#--
+function foo (foo : integer) : boolean;
+begin
+  foo = 5;
+  foo(5);
+end

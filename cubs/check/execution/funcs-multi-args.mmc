@@ -1,0 +1,19 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+function identity (i, j, k, l : integer; f, t, r: string) : integer;
+var a : string;
+begin
+  a = (f + t) + r;
+  return (i + j) + (k + l);
+end
+
+begin
+  a = 5;
+  a = identity(45, 46, 47, 48, "aAa", "bBb", "cCc");
+  a = identity(145, 146, 147, 148, "A", "B", "C");
+  a = identity(245, 246, 247, 248, "a", "b", "c");
+end

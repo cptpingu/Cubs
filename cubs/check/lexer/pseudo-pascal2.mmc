@@ -1,0 +1,44 @@
+#!/bin/cub
+#4
+#--
+#--
+var a, b, c : integer;
+var f : string;
+var truc : string;
+
+function nothing () : integer;
+begin
+end
+
+function my_func (a: integer; d,e,f:string) : integer;
+var local_a, local_b : integer;
+var local_f : string;
+begin
+  return 34;
+end
+
+function test_this_function (a: integer; d,e,f:string ) : integer;
+var local_a, local_b : integer;
+var local_f : string;
+begin
+  a = 34;
+  b = my_func(0, "hello", "str3", "str4");
+  nothing();
+  begin
+    if a == b then
+    begin
+      printf ("cooucou");
+      return "kikoo";
+    end;
+  end;
+  local_b = (55 * 56) + 37;
+  local_f = "cou" + "cou";
+end
+
+
+begin
+  truc = " et \\\\\\encor\\\e un \" \\un\\ test\tess\n";
+  print (test_this_function(42, "42", "quarante-deux", "Forty Two"));
+  // This is a comment test
+  return 0;
+end

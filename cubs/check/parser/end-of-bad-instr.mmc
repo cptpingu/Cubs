@@ -1,0 +1,9 @@
+#!/bin/cub
+#4
+#--
+#--
+
+		begin
+		         a()   b
+		         #id(id()   id);
+		end

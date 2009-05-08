@@ -1,0 +1,10 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : boolean;
+
+
+begin
+  a = 1 <= 30;
+end

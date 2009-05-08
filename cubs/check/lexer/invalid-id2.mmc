@@ -1,0 +1,15 @@
+#!/bin/cub
+#3
+#--
+#--
+var _a : integer:
+var read : integer;
+
+function read(a : integer) : integer;
+begin
+end
+
+begin
+  a___ = 0;
+  _ = 45;
+end

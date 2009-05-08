@@ -1,0 +1,19 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+function identity () : integer;
+var b : string;
+var a : string;
+begin
+  b = "toto";
+  a = b + " et tata";
+  return 19;
+end
+
+begin
+  a = 5;
+  a = identity();
+end

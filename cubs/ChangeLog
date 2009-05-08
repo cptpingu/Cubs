@@ -1,0 +1,1215 @@
+------------------------------------------------------------------------
+r175 | pingu | 2009-03-07 13:36:02 +0100 (sam. 07 mars 2009) | 3 lines
+
+Just update the README, translating remaining French sentences into English.
+
+
+------------------------------------------------------------------------
+r174 | pingu | 2009-03-06 16:16:21 +0100 (ven. 06 mars 2009) | 6 lines
+
+Replace the my::string class by an elegant one: SharedString.
+It's a big refactoring of the my::string class, to extract the
+generics flyweight into a templated class. SharedString inherits it,
+and specialized some methods.
+
+
+------------------------------------------------------------------------
+r173 | pingu | 2009-03-02 23:55:11 +0100 (lun. 02 mars 2009) | 4 lines
+
+Add -pedantic flag.
+Enhanced Configuration class.
+
+
+------------------------------------------------------------------------
+r172 | pingu | 2009-03-02 23:16:55 +0100 (lun. 02 mars 2009) | 3 lines
+
+Repace old style C static function, with an anonymous namespace.
+
+
+------------------------------------------------------------------------
+r171 | pingu | 2009-03-02 23:14:40 +0100 (lun. 02 mars 2009) | 5 lines
+
+Update the configure adding -Wabi option.
+Add a std::nl, to avoid std::endl (which flush to much).
+Add a new class my::string, which implements a flyweight.
+
+
+------------------------------------------------------------------------
+r170 | pingu | 2009-02-27 15:32:50 +0100 (ven. 27 févr. 2009) | 3 lines
+
+Add script: auto_compile.sh, to make compilation of different output easier.
+
+
+------------------------------------------------------------------------
+r169 | pingu | 2009-02-22 16:08:47 +0100 (dim. 22 févr. 2009) | 1 line
+
+Add a project's file for windows. Dev-C++.
+------------------------------------------------------------------------
+r168 | pingu | 2009-02-22 16:06:29 +0100 (dim. 22 févr. 2009) | 1 line
+
+Change uint into unsigned int, to make it works on other compiler.
+------------------------------------------------------------------------
+r167 | pingu | 2009-02-21 16:35:56 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Really fix the warnings.
+
+
+------------------------------------------------------------------------
+r166 | pingu | 2009-02-21 16:34:21 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Just fix a warning.
+
+
+------------------------------------------------------------------------
+r165 | pingu | 2009-02-21 16:20:28 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Fix a test.
+
+
+------------------------------------------------------------------------
+r164 | pingu | 2009-02-21 15:13:29 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Update the usage.
+
+
+------------------------------------------------------------------------
+r163 | pingu | 2009-02-21 14:16:40 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Add "_" before each builtin function to avoid conflict with user's one.
+
+
+------------------------------------------------------------------------
+r162 | pingu | 2009-02-21 14:12:43 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Insert full header into the cpp code source.
+
+
+------------------------------------------------------------------------
+r161 | pingu | 2009-02-21 13:48:17 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Cleaning up my mess.
+
+
+------------------------------------------------------------------------
+r160 | pingu | 2009-02-21 13:42:55 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Enhanced, escaped string in generated asm.
+
+
+------------------------------------------------------------------------
+r159 | pingu | 2009-02-21 13:25:26 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Fix a bug in while and if instruction, generating bad label.
+
+
+------------------------------------------------------------------------
+r158 | pingu | 2009-02-21 13:15:05 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Fix a bug. Escape string to make '\n' and '\t' works.
+
+
+------------------------------------------------------------------------
+r157 | pingu | 2009-02-21 04:11:55 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Fix another bug, when printing different kind of value.
+
+
+------------------------------------------------------------------------
+r156 | pingu | 2009-02-21 03:44:21 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Fix a bug, when printing static string expression.
+
+
+------------------------------------------------------------------------
+r155 | pingu | 2009-02-21 03:33:17 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Just enhanced streq and strdiff in prelude.
+
+
+------------------------------------------------------------------------
+r154 | pingu | 2009-02-21 03:31:09 +0100 (sam. 21 févr. 2009) | 3 lines
+
+Fix a bug: forgot to copy eax in edx after compared two factors.
+
+
+------------------------------------------------------------------------
+r153 | pingu | 2009-02-21 00:52:01 +0100 (sam. 21 févr. 2009) | 4 lines
+
+Fix a bug, initializing all var depending on their types.
+Update the scope class, adding method to access iterator.
+
+
+------------------------------------------------------------------------
+r152 | pingu | 2009-02-20 23:08:22 +0100 (ven. 20 févr. 2009) | 3 lines
+
+Just fix a little bug, still not fix the oters, like initialazing var in function scope, or comparing strings.
+
+
+------------------------------------------------------------------------
+r151 | pingu | 2009-02-19 20:00:20 +0100 (jeu. 19 févr. 2009) | 3 lines
+
+Add function in prelude, to read a string.
+
+
+------------------------------------------------------------------------
+r150 | pingu | 2009-02-19 18:09:11 +0100 (jeu. 19 févr. 2009) | 4 lines
+
+Handle all asm instruction, even the strings.
+Just need to add some function in prelude to male it works.
+
+
+------------------------------------------------------------------------
+r149 | pingu | 2009-02-19 17:55:48 +0100 (jeu. 19 févr. 2009) | 3 lines
+
+Fix bug, when strings isn't initialized. Force intialization to "".
+
+
+------------------------------------------------------------------------
+r148 | pingu | 2009-02-19 16:57:35 +0100 (jeu. 19 févr. 2009) | 3 lines
+
+Enhanced prelude, adding strlen and concat function in asm x86.
+
+
+------------------------------------------------------------------------
+r147 | pingu | 2009-02-18 01:23:20 +0100 (mer. 18 févr. 2009) | 3 lines
+
+Just update the usage.
+
+
+------------------------------------------------------------------------
+r146 | pingu | 2009-02-17 01:36:05 +0100 (mar. 17 févr. 2009) | 3 lines
+
+Most of the strings operations handle. Just need to take care of string concatenation. Also add option to choose between showing prelude or not.
+
+
+------------------------------------------------------------------------
+r145 | pingu | 2009-02-16 18:33:05 +0100 (lun. 16 févr. 2009) | 5 lines
+
+Just take care of string.
+Add postlude. Just need to differ type of printing !
+Add stats check script.
+
+
+------------------------------------------------------------------------
+r144 | pingu | 2009-02-16 14:35:53 +0100 (lun. 16 févr. 2009) | 3 lines
+
+Integer works. ASM is correct. String aren't handle yet.
+
+
+------------------------------------------------------------------------
+r143 | pingu | 2009-02-16 14:14:03 +0100 (lun. 16 févr. 2009) | 5 lines
+
+Fix a bug when passing args to a function call.
+Need to create a scope, to keep stack correct.
+If statement, seems to be working.
+
+
+------------------------------------------------------------------------
+r142 | pingu | 2009-02-16 01:13:51 +0100 (lun. 16 févr. 2009) | 3 lines
+
+Add some FIXME, to make it easy to track bug.
+
+
+------------------------------------------------------------------------
+r141 | pingu | 2009-02-15 23:19:59 +0100 (dim. 15 févr. 2009) | 3 lines
+
+Just update asm generator to handle boolean expression.
+
+
+------------------------------------------------------------------------
+r140 | pingu | 2009-02-15 19:34:17 +0100 (dim. 15 févr. 2009) | 3 lines
+
+Add prelude generation.
+
+
+------------------------------------------------------------------------
+r139 | pingu | 2009-02-15 18:07:01 +0100 (dim. 15 févr. 2009) | 4 lines
+
+Add new tests.
+Fix some bugs, passing arguments from right to left.
+
+
+------------------------------------------------------------------------
+r138 | pingu | 2009-02-08 22:55:06 +0100 (dim. 08 févr. 2009) | 3 lines
+
+Just update the FIXME list.
+
+
+------------------------------------------------------------------------
+r137 | pingu | 2009-02-08 22:45:35 +0100 (dim. 08 févr. 2009) | 3 lines
+
+Fix another bug, with return node.
+
+
+------------------------------------------------------------------------
+r136 | pingu | 2009-02-08 22:43:27 +0100 (dim. 08 févr. 2009) | 3 lines
+
+Fix a little bug.
+
+
+------------------------------------------------------------------------
+r135 | pingu | 2009-02-08 22:05:49 +0100 (dim. 08 févr. 2009) | 3 lines
+
+Update asm generator. Basic expression now works fine.
+
+
+------------------------------------------------------------------------
+r134 | pingu | 2009-02-08 19:06:29 +0100 (dim. 08 févr. 2009) | 3 lines
+
+Handle another instrutions.
+
+
+------------------------------------------------------------------------
+r133 | pingu | 2009-02-08 18:01:56 +0100 (dim. 08 févr. 2009) | 3 lines
+
+Update asm generation. Still not finished. Very basic instructions were handled.
+
+
+------------------------------------------------------------------------
+r132 | pingu | 2009-02-08 17:09:46 +0100 (dim. 08 févr. 2009) | 4 lines
+
+Add a new ASM generation option.
+Not finished, and still buggy.
+
+
+------------------------------------------------------------------------
+r131 | pingu | 2008-08-13 19:25:17 +0200 (mer. 13 août 2008) | 3 lines
+
+Fix two little bugs in dot generator.
+
+
+------------------------------------------------------------------------
+r130 | pingu | 2008-08-13 18:54:22 +0200 (mer. 13 août 2008) | 4 lines
+
+Update the generate Dot visitor, to add color.
+Colors are constants, hence easily editable.
+
+
+------------------------------------------------------------------------
+r129 | pingu | 2008-08-13 18:20:06 +0200 (mer. 13 août 2008) | 3 lines
+
+Add a new Dot Parser generator.
+
+
+------------------------------------------------------------------------
+r128 | pingu | 2008-08-11 19:40:37 +0200 (lun. 11 août 2008) | 3 lines
+
+Fix a bug in execution with modifying a global variable in a function.
+
+
+------------------------------------------------------------------------
+r127 | pingu | 2008-08-09 17:03:38 +0200 (sam. 09 août 2008) | 3 lines
+
+Convert to cpp visitor now works.
+
+
+------------------------------------------------------------------------
+r126 | pingu | 2008-08-09 16:56:21 +0200 (sam. 09 août 2008) | 4 lines
+
+Fix a bug in string escaping.
+ConvertToCpp visitor soon finished.
+
+
+------------------------------------------------------------------------
+r125 | pingu | 2008-08-08 19:22:01 +0200 (ven. 08 août 2008) | 6 lines
+
+All classes were commented.
+Add a new TypedNode to solve a problem wth elegance.
+Add convert to cpp visitor, but it's the same as pretty printer... for now !
+Add tests and clean project.
+
+
+------------------------------------------------------------------------
+r124 | pingu | 2008-08-07 19:51:22 +0200 (jeu. 07 août 2008) | 4 lines
+
+Fix some warnings encountered under gcc4.3.
+Comment classes.
+
+
+------------------------------------------------------------------------
+r123 | pingu | 2008-08-07 01:30:23 +0200 (jeu. 07 août 2008) | 4 lines
+
+Add new classes.
+Move inline from .hh to .hxx
+
+
+------------------------------------------------------------------------
+r122 | pingu | 2008-08-06 19:52:24 +0200 (mer. 06 août 2008) | 6 lines
+
+AST Creator and Grammar Generator are no longer visitors.
+Comment a lot of classes.
+Rename some classes.
+Add pure virtual accept method in Node class.
+
+
+------------------------------------------------------------------------
+r121 | pingu | 2008-08-06 08:14:08 +0200 (mer. 06 août 2008) | 3 lines
+
+Comment some nodes.
+
+
+------------------------------------------------------------------------
+r120 | pingu | 2008-08-05 20:14:33 +0200 (mar. 05 août 2008) | 3 lines
+
+Comment a lot of classes.
+
+
+------------------------------------------------------------------------
+r119 | pingu | 2008-08-05 03:52:38 +0200 (mar. 05 août 2008) | 3 lines
+
+Comment symbol/
+
+
+------------------------------------------------------------------------
+r118 | pingu | 2008-08-05 03:32:00 +0200 (mar. 05 août 2008) | 3 lines
+
+Comment the lexer.
+
+
+------------------------------------------------------------------------
+r117 | pingu | 2008-08-04 16:55:53 +0200 (lun. 04 août 2008) | 3 lines
+
+Fix a little bug. Add a test.
+
+
+------------------------------------------------------------------------
+r116 | pingu | 2008-08-04 06:09:20 +0200 (lun. 04 août 2008) | 3 lines
+
+Add make install rule.
+
+
+------------------------------------------------------------------------
+r115 | pingu | 2008-08-04 05:49:46 +0200 (lun. 04 août 2008) | 3 lines
+
+Last update, soon first released.
+
+
+------------------------------------------------------------------------
+r114 | pingu | 2008-08-04 05:45:55 +0200 (lun. 04 août 2008) | 3 lines
+
+Fix all bug.
+
+
+------------------------------------------------------------------------
+r113 | pingu | 2008-08-04 05:40:43 +0200 (lun. 04 août 2008) | 5 lines
+
+Fix a very vicious bug found with moulette !
+A return in a while doesn't handle correctly.
+Add tests, and update others.
+
+
+------------------------------------------------------------------------
+r112 | pingu | 2008-08-04 05:06:58 +0200 (lun. 04 août 2008) | 3 lines
+
+Update main.cc to display errors, on error output.
+
+
+------------------------------------------------------------------------
+r111 | pingu | 2008-08-04 04:33:23 +0200 (lun. 04 août 2008) | 4 lines
+
+Add a moulette.
+Update all tests to match moulette format.
+
+
+------------------------------------------------------------------------
+r110 | pingu | 2008-08-03 18:31:17 +0200 (dim. 03 août 2008) | 3 lines
+
+Add some more tests.
+
+
+------------------------------------------------------------------------
+r109 | pingu | 2008-08-03 18:26:35 +0200 (dim. 03 août 2008) | 3 lines
+
+Function can't have builtin name.
+
+
+------------------------------------------------------------------------
+r108 | pingu | 2008-08-03 18:12:53 +0200 (dim. 03 août 2008) | 3 lines
+
+Fix a bug. An id must have a valid name.
+
+
+------------------------------------------------------------------------
+r107 | pingu | 2008-08-03 17:36:42 +0200 (dim. 03 août 2008) | 5 lines
+
+Handle division by zero.
+Clean project and test it in optimize mode -O3.
+Add a configured Doxyfile to generate documenation.
+
+
+------------------------------------------------------------------------
+r106 | pingu | 2008-08-03 16:27:59 +0200 (dim. 03 août 2008) | 3 lines
+
+Add doxygen file.
+
+
+------------------------------------------------------------------------
+r105 | pingu | 2008-08-03 06:08:26 +0200 (dim. 03 août 2008) | 5 lines
+
+Update Authors and README.
+Also change svn and trac.
+Now project's name is "cubs" (a little Tiger), instead of MiniCompiler.
+
+
+------------------------------------------------------------------------
+r104 | pingu | 2008-08-03 01:17:39 +0200 (dim. 03 août 2008) | 4 lines
+
+Clean all FIXME.
+Project is clean now.
+
+
+------------------------------------------------------------------------
+r103 | pingu | 2008-08-03 01:05:03 +0200 (dim. 03 août 2008) | 4 lines
+
+Find this fucking memory leak.
+A stupid error, totally fixed now.
+
+
+------------------------------------------------------------------------
+r102 | pingu | 2008-08-01 23:16:57 +0200 (ven. 01 août 2008) | 5 lines
+
+Fix some bugs.
+Exit can return value.
+Add some test.
+
+
+------------------------------------------------------------------------
+r101 | pingu | 2008-08-01 22:14:52 +0200 (ven. 01 août 2008) | 3 lines
+
+Add support of modulo operator.
+
+
+------------------------------------------------------------------------
+r100 | pingu | 2008-08-01 21:27:14 +0200 (ven. 01 août 2008) | 4 lines
+
+Read is working. Add some new tests.
+100th commit, cheers !
+
+
+------------------------------------------------------------------------
+r99 | pingu | 2008-08-01 20:46:10 +0200 (ven. 01 août 2008) | 4 lines
+
+Some refactoring.
+Rename scope.get to scope.getFromAll, and rename scope.find to scope.getFromCurrent.
+
+
+------------------------------------------------------------------------
+r98 | pingu | 2008-08-01 20:22:52 +0200 (ven. 01 août 2008) | 4 lines
+
+Print node work.
+Add node.
+
+
+------------------------------------------------------------------------
+r97 | pingu | 2008-08-01 19:59:52 +0200 (ven. 01 août 2008) | 7 lines
+
+Add new option to choose which type of execution to display.
+x : normal
+X : view code
+d : view code and variable values at each line
+D : view code, variable and special variable values at each line
+
+
+------------------------------------------------------------------------
+r96 | pingu | 2008-08-01 18:31:49 +0200 (ven. 01 août 2008) | 4 lines
+
+Execution tree is now const.
+Make constante for special nodes.
+
+
+------------------------------------------------------------------------
+r95 | pingu | 2008-08-01 18:01:07 +0200 (ven. 01 août 2008) | 3 lines
+
+Enhanced the execution displaying.
+
+
+------------------------------------------------------------------------
+r94 | pingu | 2008-08-01 16:42:37 +0200 (ven. 01 août 2008) | 4 lines
+
+Fix a bug in binder and bindging printer.
+
+
+
+------------------------------------------------------------------------
+r93 | pingu | 2008-08-01 15:54:32 +0200 (ven. 01 août 2008) | 5 lines
+
+Fix another bug: now we don't display an invalid parser tree.
+Others invalid tree like bindings or type checking can be displayed.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r92 | pingu | 2008-08-01 15:34:15 +0200 (ven. 01 août 2008) | 4 lines
+
+Fix another bug in parser.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r91 | pingu | 2008-08-01 15:21:09 +0200 (ven. 01 août 2008) | 5 lines
+
+Fix a bug in parser. Now can handle negativ or positiv value,
+using a little trick :)
+
+
+
+------------------------------------------------------------------------
+r90 | pingu | 2008-07-31 16:10:54 +0200 (jeu. 31 juil. 2008) | 4 lines
+
+Fix some bugs in execution.
+Add tests.
+
+
+------------------------------------------------------------------------
+r89 | pingu | 2008-07-31 15:22:42 +0200 (jeu. 31 juil. 2008) | 5 lines
+
+Execution was fixed, and seems to work.
+I need to test it widely and to fix som other bugs.
+I surely refactor execution to clean it.
+
+
+------------------------------------------------------------------------
+r88 | pingu | 2008-07-31 02:54:30 +0200 (jeu. 31 juil. 2008) | 6 lines
+
+Execution works for instructions, loop and classic function.
+Recursive functions have strange behavior. I'm working on it.
+A memory leak is present, to avoid a segfault. It's ugly, but
+I will fix it soon.
+
+
+------------------------------------------------------------------------
+r87 | pingu | 2008-07-30 20:00:50 +0200 (mer. 30 juil. 2008) | 3 lines
+
+Trying to search fucking bug...
+
+
+------------------------------------------------------------------------
+r86 | pingu | 2008-07-30 18:45:29 +0200 (mer. 30 juil. 2008) | 6 lines
+
+Fix a bug in the binder.
+Some of code can be executed.
+Only function with multiple calling remains.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r85 | pingu | 2008-07-30 16:10:28 +0200 (mer. 30 juil. 2008) | 5 lines
+
+Expression with variable now works.
+If and while instruction work.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r84 | pingu | 2008-07-30 15:31:27 +0200 (mer. 30 juil. 2008) | 6 lines
+
+Fix a bug in type checker, operation with comparison is now type boolean
+even if his all factor wasn't.
+Finish boolean operation behavior in execution.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r83 | pingu | 2008-07-30 15:17:49 +0200 (mer. 30 juil. 2008) | 6 lines
+
+Complete the type checker, adding some rules of typing on operation.
+Now operator not compatible with all types.
+Moreover, if and while must take a boolean expression.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r82 | pingu | 2008-07-30 05:35:17 +0200 (mer. 30 juil. 2008) | 6 lines
+
+Update the variable class.
+Update the scope to display some information nicer.
+Update the main execution. Static expression works.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r81 | pingu | 2008-07-30 04:09:19 +0200 (mer. 30 juil. 2008) | 9 lines
+
+Add a variable class for handle multi type variable.
+Update scope with a closeAndDelete method to close a scope,
+deleting all value pointed by the "Data" type.
+Create a new executable visitor.
+Update the type checker.
+Fix a bug in the pretty printer.
+Add a new properties in Node, to handle computed value.
+
+
+------------------------------------------------------------------------
+r80 | pingu | 2008-07-29 21:16:44 +0200 (mar. 29 juil. 2008) | 4 lines
+
+Type checking is working.
+Add some tests about that.
+
+
+------------------------------------------------------------------------
+r79 | pingu | 2008-07-29 17:43:34 +0200 (mar. 29 juil. 2008) | 3 lines
+
+Update the type checker. Soon working.
+
+
+------------------------------------------------------------------------
+r78 | pingu | 2008-07-29 16:11:58 +0200 (mar. 29 juil. 2008) | 5 lines
+
+Fix a bug in binding printer.
+Update the type checker visitor.
+Only function remains untyped, others node's type are known.
+
+
+------------------------------------------------------------------------
+r77 | pingu | 2008-07-29 15:38:06 +0200 (mar. 29 juil. 2008) | 4 lines
+
+Update the binding to detect calling a function with wrong number of arguments.
+Also bind each arguments, with called func arguments.
+
+
+------------------------------------------------------------------------
+r76 | pingu | 2008-07-29 02:35:31 +0200 (mar. 29 juil. 2008) | 7 lines
+
+Change main behavior of tree displaying.
+Now an error occured, tree is still displayed.
+Add a typeMismatch function to handle typing
+error easier. Type checking is working for basic
+literal expressions.
+
+
+------------------------------------------------------------------------
+r75 | pingu | 2008-07-29 02:10:07 +0200 (mar. 29 juil. 2008) | 4 lines
+
+Just update the printer, and begin some type checking.
+I search type by searching in leaf, then upping type to parent node.
+
+
+------------------------------------------------------------------------
+r74 | pingu | 2008-07-29 01:29:28 +0200 (mar. 29 juil. 2008) | 5 lines
+
+Add an empty TypeChecker visitor.
+Soon finished the TypeChecking printer.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r73 | pingu | 2008-07-28 19:09:00 +0200 (lun. 28 juil. 2008) | 13 lines
+
+Binding is finished. Scoped variables and scoped functions
+are in separated chunks, so things like that is non-ambiguous:
+function foo(foo : integer) : integer;
+begin
+  foo = 5;
+  foo(5);
+end
+The "foo" function is different than the "foo" variable, so
+there isn't a redefinition error.
+
+Moreover, return keywords must be in a function.
+
+
+------------------------------------------------------------------------
+r72 | pingu | 2008-07-28 18:32:53 +0200 (lun. 28 juil. 2008) | 6 lines
+
+Creat new nodes : "NodeIdFunc" for handle id of
+function differently than id of variable, and
+"NodeExit" which add a new command to the langage.
+Exit return an int value and quit program.
+
+
+------------------------------------------------------------------------
+r71 | pingu | 2008-07-28 01:25:09 +0200 (lun. 28 juil. 2008) | 4 lines
+
+Finish the binding printer.
+Displaying even association between function and return.
+
+
+------------------------------------------------------------------------
+r70 | pingu | 2008-07-28 00:45:31 +0200 (lun. 28 juil. 2008) | 5 lines
+
+Add a new function to convert int to string.
+Fix all bugs in Binder.
+Error now show where is first define a variable when there is a redefinition.
+
+
+------------------------------------------------------------------------
+r69 | pingu | 2008-07-28 00:21:58 +0200 (lun. 28 juil. 2008) | 4 lines
+
+Binding seems working.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r68 | pingu | 2008-07-27 23:22:22 +0200 (dim. 27 juil. 2008) | 6 lines
+
+Fix a bug in the BaseVisitor for the "Print" node.
+Fix a lot of bug in BinderVisitor.
+Implements a "visitFuncHeader" which can detect function
+even declared after current function declaration.
+
+
+------------------------------------------------------------------------
+r67 | pingu | 2008-07-27 22:00:08 +0200 (dim. 27 juil. 2008) | 3 lines
+
+Added a Binder class which take care of binding everything.
+
+
+------------------------------------------------------------------------
+r66 | pingu | 2008-07-27 20:07:37 +0200 (dim. 27 juil. 2008) | 4 lines
+
+Make the BaseVisitor templated.
+We can now extends a ConstVisitor or a NonConstVisitor.
+
+
+------------------------------------------------------------------------
+r65 | pingu | 2008-07-27 19:36:05 +0200 (dim. 27 juil. 2008) | 5 lines
+
+Fix some Scope bugs.
+Warning: This revision doesn't compile.
+It's a test copy, hence check out previous revision.
+
+
+------------------------------------------------------------------------
+r64 | pingu | 2008-07-27 18:13:24 +0200 (dim. 27 juil. 2008) | 3 lines
+
+Refactor traits putting them in a class "Traits".
+
+
+------------------------------------------------------------------------
+r63 | pingu | 2008-07-27 18:10:02 +0200 (dim. 27 juil. 2008) | 3 lines
+
+Add a scope map class, and Traits class.
+
+
+------------------------------------------------------------------------
+r62 | pingu | 2008-07-27 15:19:23 +0200 (dim. 27 juil. 2008) | 3 lines
+
+Add the binder and the binding visitor.
+
+
+------------------------------------------------------------------------
+r61 | pingu | 2008-07-27 13:41:55 +0200 (dim. 27 juil. 2008) | 4 lines
+
+Add Boolean node, to take care of boolean.
+Add a test.
+
+
+------------------------------------------------------------------------
+r60 | pingu | 2008-07-27 02:49:29 +0200 (dim. 27 juil. 2008) | 5 lines
+
+Fix some bugs.
+Find a new test which not pass :s
+Fix a mistake => "\"" to cfg["str"] in Pretty Printer.
+
+
+------------------------------------------------------------------------
+r59 | pingu | 2008-07-27 01:47:39 +0200 (dim. 27 juil. 2008) | 5 lines
+
+Fix a little bug.
+Parser seems to be working !
+Add a generated test.
+
+
+------------------------------------------------------------------------
+r58 | pingu | 2008-07-26 21:15:36 +0200 (sam. 26 juil. 2008) | 3 lines
+
+Grammar generator works !
+
+
+------------------------------------------------------------------------
+r57 | pingu | 2008-07-26 21:09:53 +0200 (sam. 26 juil. 2008) | 4 lines
+
+Grammar generator is now implemented.
+Just need to debug it :)
+
+
+------------------------------------------------------------------------
+r56 | pingu | 2008-07-26 20:57:33 +0200 (sam. 26 juil. 2008) | 4 lines
+
+Add a random grammar generator.
+Not tested yet, but it's in work.
+
+
+------------------------------------------------------------------------
+r55 | pingu | 2008-07-26 19:21:40 +0200 (sam. 26 juil. 2008) | 3 lines
+
+Create a real parser option handler.
+
+
+------------------------------------------------------------------------
+r54 | pingu | 2008-07-26 14:18:39 +0200 (sam. 26 juil. 2008) | 5 lines
+
+Add a very basic option parser.
+Add usage.
+Now we can choose from command line information to display.
+
+
+------------------------------------------------------------------------
+r53 | pingu | 2008-07-26 13:49:22 +0200 (sam. 26 juil. 2008) | 5 lines
+
+Add a new file.
+Clean some exception.
+Class "Compile" can be configured.
+
+
+------------------------------------------------------------------------
+r52 | pingu | 2008-07-26 13:07:46 +0200 (sam. 26 juil. 2008) | 5 lines
+
+Fix a memory leak and fix a bug searching
+for this leak... Thanx valgrind !
+Also fix a miss in Pretty Printer.
+
+
+------------------------------------------------------------------------
+r51 | pingu | 2008-07-26 12:33:37 +0200 (sam. 26 juil. 2008) | 9 lines
+
+Finish the pretty printer.
+Fix a lot of bug.
+Add a new helper function in utils class.
+Fix some test.
+Grammar was changed. Now ; is mandatory, but
+not after a end token.
+Add more tests.
+
+
+------------------------------------------------------------------------
+r50 | pingu | 2008-07-25 22:00:22 +0200 (ven. 25 juil. 2008) | 4 lines
+
+Fix a little bug.
+Now it compiles.
+
+
+------------------------------------------------------------------------
+r49 | pingu | 2008-07-25 21:52:49 +0200 (ven. 25 juil. 2008) | 3 lines
+
+Clean projects, deleting unnecessary classes.
+
+
+------------------------------------------------------------------------
+r48 | pingu | 2008-07-25 21:49:56 +0200 (ven. 25 juil. 2008) | 3 lines
+
+Add inline functions for CreateASTVisitor.
+
+
+------------------------------------------------------------------------
+r47 | pingu | 2008-07-25 21:49:25 +0200 (ven. 25 juil. 2008) | 6 lines
+
+Big update.
+Add Constify traits for generating const and non const visitor.
+Clean the project.
+Update some little things to make it sexy.
+
+
+------------------------------------------------------------------------
+r46 | pingu | 2008-07-25 04:38:36 +0200 (ven. 25 juil. 2008) | 3 lines
+
+Fix the while node.
+
+
+------------------------------------------------------------------------
+r45 | pingu | 2008-07-25 04:36:19 +0200 (ven. 25 juil. 2008) | 3 lines
+
+If node fixed.
+
+
+------------------------------------------------------------------------
+r44 | pingu | 2008-07-25 04:17:52 +0200 (ven. 25 juil. 2008) | 3 lines
+
+Take care of if and while instruction.
+
+
+------------------------------------------------------------------------
+r43 | pingu | 2008-07-25 04:14:44 +0200 (ven. 25 juil. 2008) | 4 lines
+
+Update the pretty printer.
+Change some nodes, like if ans while.
+
+
+------------------------------------------------------------------------
+r42 | pingu | 2008-07-25 03:23:18 +0200 (ven. 25 juil. 2008) | 5 lines
+
+Fix some bugs.
+Fill some nodes.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r41 | pingu | 2008-07-25 02:11:21 +0200 (ven. 25 juil. 2008) | 3 lines
+
+Fix a little bug in the pretty printer.
+
+
+------------------------------------------------------------------------
+r40 | pingu | 2008-07-25 02:07:42 +0200 (ven. 25 juil. 2008) | 4 lines
+
+Add a new function for converting string to int.
+Update the number node.
+
+
+------------------------------------------------------------------------
+r39 | pingu | 2008-07-25 01:49:03 +0200 (ven. 25 juil. 2008) | 5 lines
+
+Find a nice solution for handle expression.
+Fix some bugs.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r38 | pingu | 2008-07-25 01:06:10 +0200 (ven. 25 juil. 2008) | 3 lines
+
+Add a new node, which factorize old ones.
+
+
+------------------------------------------------------------------------
+r37 | pingu | 2008-07-25 00:11:02 +0200 (ven. 25 juil. 2008) | 3 lines
+
+Update some little things.
+
+
+------------------------------------------------------------------------
+r36 | pingu | 2008-07-24 21:29:49 +0200 (jeu. 24 juil. 2008) | 3 lines
+
+Visit factor node.
+
+
+------------------------------------------------------------------------
+r35 | pingu | 2008-07-24 19:42:33 +0200 (jeu. 24 juil. 2008) | 3 lines
+
+Builtin read was handled.
+
+
+------------------------------------------------------------------------
+r34 | pingu | 2008-07-24 19:05:14 +0200 (jeu. 24 juil. 2008) | 4 lines
+
+Update some nodes.
+Add some tests.
+
+
+------------------------------------------------------------------------
+r33 | pingu | 2008-07-24 17:52:46 +0200 (jeu. 24 juil. 2008) | 4 lines
+
+Fix indentation.
+Add rules for indenting.
+
+
+------------------------------------------------------------------------
+r32 | pingu | 2008-07-24 17:43:30 +0200 (jeu. 24 juil. 2008) | 4 lines
+
+Declarations works.
+Function declaration works.
+
+
+------------------------------------------------------------------------
+r31 | pingu | 2008-07-24 17:21:50 +0200 (jeu. 24 juil. 2008) | 6 lines
+
+Add a new node in grammar.
+Fix some bugs.
+Fill the visitor, but still buggy.
+Add some new tests.
+
+
+------------------------------------------------------------------------
+r30 | pingu | 2008-07-24 03:54:54 +0200 (jeu. 24 juil. 2008) | 3 lines
+
+Update the pretty printer and the indent helper.
+
+
+------------------------------------------------------------------------
+r29 | pingu | 2008-07-24 02:53:06 +0200 (jeu. 24 juil. 2008) | 3 lines
+
+Add a new class for indentation.
+
+
+------------------------------------------------------------------------
+r28 | pingu | 2008-07-24 02:15:28 +0200 (jeu. 24 juil. 2008) | 4 lines
+
+Add 2 new classes.
+Indent and CreateASTVisitor.
+
+
+------------------------------------------------------------------------
+r27 | pingu | 2008-07-24 01:44:54 +0200 (jeu. 24 juil. 2008) | 4 lines
+
+It becomes alive !
+But still need working at it.
+
+
+------------------------------------------------------------------------
+r26 | pingu | 2008-07-24 01:20:33 +0200 (jeu. 24 juil. 2008) | 3 lines
+
+Update the pretty printer.
+
+
+------------------------------------------------------------------------
+r25 | pingu | 2008-07-24 01:02:50 +0200 (jeu. 24 juil. 2008) | 3 lines
+
+Fix a minor bug.
+
+
+------------------------------------------------------------------------
+r24 | pingu | 2008-07-24 00:59:21 +0200 (jeu. 24 juil. 2008) | 4 lines
+
+Change the architecture of nodes.
+No ugly hacks anymore.
+
+
+------------------------------------------------------------------------
+r23 | pingu | 2008-07-23 23:29:11 +0200 (mer. 23 juil. 2008) | 3 lines
+
+Fix some little minor bug.
+
+
+------------------------------------------------------------------------
+r22 | pingu | 2008-07-23 23:16:17 +0200 (mer. 23 juil. 2008) | 4 lines
+
+Update visitor. Some problems with
+constness, so nothing was keeping const :(
+
+
+------------------------------------------------------------------------
+r21 | pingu | 2008-07-23 18:21:20 +0200 (mer. 23 juil. 2008) | 5 lines
+
+Fix the Singleton template which
+created memory leaks.
+All memory leaks fixed !
+
+
+------------------------------------------------------------------------
+r20 | pingu | 2008-07-23 17:42:24 +0200 (mer. 23 juil. 2008) | 3 lines
+
+Clean some little things.
+
+
+------------------------------------------------------------------------
+r19 | pingu | 2008-07-23 17:28:53 +0200 (mer. 23 juil. 2008) | 3 lines
+
+Add the PrettyPrinterVisitor.
+
+
+------------------------------------------------------------------------
+r18 | pingu | 2008-07-23 16:41:53 +0200 (mer. 23 juil. 2008) | 4 lines
+
+Update some node to take of visitor.
+Add BaseVisitor.
+
+
+------------------------------------------------------------------------
+r17 | pingu | 2008-07-23 15:08:17 +0200 (mer. 23 juil. 2008) | 4 lines
+
+Update some nodes.
+Test a visitor, temporarely.
+
+
+------------------------------------------------------------------------
+r16 | pingu | 2008-07-23 13:24:11 +0200 (mer. 23 juil. 2008) | 4 lines
+
+Fix some little errors.
+Put temprorary a test in the parser class.
+
+
+------------------------------------------------------------------------
+r15 | pingu | 2008-07-23 06:43:25 +0200 (mer. 23 juil. 2008) | 3 lines
+
+Fix some little mistakes.
+
+
+------------------------------------------------------------------------
+r14 | pingu | 2008-07-23 06:08:43 +0200 (mer. 23 juil. 2008) | 4 lines
+
+Still adding new nodes.
+Change grammar.
+
+
+------------------------------------------------------------------------
+r13 | pingu | 2008-07-23 05:10:05 +0200 (mer. 23 juil. 2008) | 5 lines
+
+Add some others nodes.
+Fill previous node.
+Update grammar.
+
+
+------------------------------------------------------------------------
+r12 | pingu | 2008-07-23 03:55:31 +0200 (mer. 23 juil. 2008) | 3 lines
+
+Delete useless file.
+
+
+------------------------------------------------------------------------
+r11 | pingu | 2008-07-23 03:54:42 +0200 (mer. 23 juil. 2008) | 3 lines
+
+Add new node for operations.
+
+
+------------------------------------------------------------------------
+r10 | pingu | 2008-07-23 02:58:17 +0200 (mer. 23 juil. 2008) | 3 lines
+
+Delete 2 useless classes.
+
+
+------------------------------------------------------------------------
+r9 | pingu | 2008-07-23 02:57:38 +0200 (mer. 23 juil. 2008) | 4 lines
+
+Add new nodes.
+
+
+
+------------------------------------------------------------------------
+r8 | pingu | 2008-07-23 01:00:02 +0200 (mer. 23 juil. 2008) | 5 lines
+
+Add some other nodes.
+Fix some little things.
+Update grammar.
+
+
+------------------------------------------------------------------------
+r7 | pingu | 2008-07-22 22:54:24 +0200 (mar. 22 juil. 2008) | 4 lines
+
+Add new nodes.
+Delete old useless file.
+
+
+------------------------------------------------------------------------
+r6 | pingu | 2008-07-22 21:22:40 +0200 (mar. 22 juil. 2008) | 5 lines
+
+Add new node.
+Change the grammar a little.
+Update some other classes.
+
+
+------------------------------------------------------------------------
+r5 | pingu | 2008-07-22 02:59:02 +0200 (mar. 22 juil. 2008) | 3 lines
+
+Fix a little bug which displays output two times.
+
+
+------------------------------------------------------------------------
+r4 | pingu | 2008-07-22 02:42:54 +0200 (mar. 22 juil. 2008) | 3 lines
+
+Update the lexer to take care of the grammar changes.
+
+
+------------------------------------------------------------------------
+r3 | pingu | 2008-07-22 01:52:27 +0200 (mar. 22 juil. 2008) | 4 lines
+
+Change the formal grammar for a pseudo pascal one.
+See the README.
+
+
+------------------------------------------------------------------------
+r2 | pingu | 2008-07-21 21:54:38 +0200 (lun. 21 juil. 2008) | 3 lines
+
+Juste update some little things.
+
+
+------------------------------------------------------------------------
+r1 | pingu | 2008-07-21 21:27:52 +0200 (lun. 21 juil. 2008) | 8 lines
+
+Base of the project commited.
+The lexer is working.
+Structure, makefile and configure are
+operational.
+
+Check the README file for grammar.
+
+
+------------------------------------------------------------------------

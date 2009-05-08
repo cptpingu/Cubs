@@ -1,0 +1,13 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+function pouet () : integer;
+begin
+end
+
+begin
+  a = pouet();
+end

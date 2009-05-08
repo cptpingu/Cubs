@@ -1,0 +1,15 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+var b : integer;
+var c : integer;
+var d : integer;
+
+begin
+  a = 2000 / (5 + (5 + 42));
+  c = (5 - 5);
+  d = (5) / (5);
+  b = ((5) * (5));
+end

@@ -1,0 +1,25 @@
+#!/bin/cub
+#90
+#--
+#--
+var a : integer;
+
+function foo(a : integer) : integer;
+var b : integer;
+begin
+  b = 1;
+  if b > 5 then
+  begin
+    b = a;
+  end
+  else
+  begin
+    exit 90;
+  end
+
+  return 34;
+end
+
+begin
+  a = foo(38);
+end

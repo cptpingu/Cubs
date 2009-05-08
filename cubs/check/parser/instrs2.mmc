@@ -1,0 +1,12 @@
+#!/bin/cub
+#5
+#--
+#--
+begin
+  begin
+    if a == b then
+    begin
+    end
+  end
+  local_b = 37;
+end

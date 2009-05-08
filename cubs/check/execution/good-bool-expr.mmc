@@ -1,0 +1,9 @@
+#!/bin/cub
+#0
+#--
+#--
+var b : boolean;
+
+begin
+  b = 5 > 2;
+end

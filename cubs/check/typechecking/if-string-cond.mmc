@@ -1,0 +1,9 @@
+#!/bin/cub
+#6
+#--
+#--
+begin
+  if "I'm in" then
+  begin
+  end
+end

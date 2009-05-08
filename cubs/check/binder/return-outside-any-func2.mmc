@@ -1,0 +1,12 @@
+#!/bin/cub
+#5
+#--
+#--
+function foo() : boolean;
+begin
+  return true;
+end
+
+begin
+  return 0;
+end

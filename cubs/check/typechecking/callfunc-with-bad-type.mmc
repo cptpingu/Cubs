@@ -1,0 +1,12 @@
+#!/bin/cub
+#6
+#--
+#--
+function foo (a : integer) : integer;
+begin
+	return 0;
+end
+
+begin
+  foo ("kikoo");
+end

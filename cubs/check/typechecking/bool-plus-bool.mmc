@@ -1,0 +1,8 @@
+#!/bin/cub
+#6
+#--
+#--
+var a : integer;
+begin
+  a = true + false;
+end

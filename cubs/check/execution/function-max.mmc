@@ -1,0 +1,26 @@
+#!/bin/cub
+#0
+#--
+#--
+var a, b, c : integer;
+
+function max (a : integer; b : integer) : integer;
+begin
+  if a > b then
+  begin
+    return a;
+  end
+
+  return b;
+end
+
+begin
+  a = 5;
+  b = -34;
+  c = 56;
+
+  a = max (a, b); // 5
+  a = max(56, 109); // 109
+  a = max(-34, b + 1); // -33
+  a = max(c, c); // 56
+end

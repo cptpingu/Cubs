@@ -1,0 +1,26 @@
+#!/bin/cub
+#0
+#--
+#6346474849505121
+#--
+var a : integer;
+
+function identity (i, j, k, l : integer; f, t, r: integer) : integer;
+begin
+   print(i);
+   print(j);
+   print(k);
+   print(l);
+   print(f);
+   print(t);
+   print(r);
+
+   return 21;
+end
+
+begin
+   a = 5;
+   a = identity(45 + 18, 46, 47, 48, 49, 50, 51);
+   print(a);
+   print("\n");
+end

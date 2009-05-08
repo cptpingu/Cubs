@@ -1,0 +1,22 @@
+#!/bin/cub
+#0
+#--
+#118
+#Hello World !
+#true
+#--
+var i : integer;
+var s : string;
+var b : boolean;
+
+begin
+  i = 118;
+  print(i);
+  print("\n");
+  s = "Hello World !";
+  print(s);
+  print("\n");
+  b = true;
+  print(b);
+  print("\n");
+end

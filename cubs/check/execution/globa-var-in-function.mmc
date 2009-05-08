@@ -1,0 +1,13 @@
+var a : integer;
+
+function foo() : integer;
+var b : integer;
+begin
+  b = a + 8;
+  a = 67;
+end
+
+begin
+  a = 9;
+  foo();
+end

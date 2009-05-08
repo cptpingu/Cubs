@@ -1,0 +1,9 @@
+#!/bin/cub
+#7
+#--
+#--
+var a :integer;
+
+begin
+  a = 45 / 0;
+end

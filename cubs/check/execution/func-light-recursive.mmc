@@ -1,0 +1,18 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+function factorielle (nb : integer) : integer;
+begin
+   if (nb <= 1) then
+   begin
+     return 1;
+   end
+   return nb * factorielle(nb - 1);
+end
+
+begin
+  a = factorielle(3);
+end

@@ -1,0 +1,65 @@
+#!/bin/cub
+#0
+#--
+#0cooucou0
+#--
+var a, b, c : integer;
+var f : string;
+var truc : string;
+
+function nothing () : integer;
+begin
+end
+
+function callRecursive () : integer;
+begin
+  callRecursive();
+end
+
+function callAFunctionAfterMe () : integer;
+begin
+  c = my_func(0, "d", "e", "f");
+end
+
+function my_func (a: integer; d,e,f:string) : integer;
+var local_a, local_b : integer;
+var local_f : string;
+begin
+  return 34;
+end
+
+function test_this_function (a: integer; d,e,f:string ) : integer;
+var local_a, local_b : integer;
+var local_f : string;
+begin
+  a = 34;
+  truc = "Heyya";
+  b = my_func(0, "hello", "str3", "str4");
+  nothing();
+  begin
+    if a == b then
+    begin
+      print ("cooucou");
+    end
+    while a == b do
+    begin
+	return 0;
+    end
+  end
+  local_b = ((55 * 56) + 37) / local_b;
+  local_f = "cou" + "cou";
+  exit 23;
+end
+
+
+begin
+  truc = " et \\\\\\encor\\\e un \" \\un\\ test\tess\n";
+  a = 35 * a;
+  nothing();
+  print (nothing());
+  print (test_this_function(21, "42", "quarante-deux", "OK"));
+  print("\n");
+  // This is a comment test
+  a = (1 +(2 + (3 + 4)));
+  exit 0;
+end

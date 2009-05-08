@@ -1,0 +1,24 @@
+#!/bin/cub
+#skip
+var i : integer;
+var s : string;
+var b : boolean;
+
+begin
+  print("Enter an integer : ");
+  read(i);
+  print("Enter a string : ");
+  read(s);
+  print("Enter a boolean : ");
+  read(b);
+
+  print("The integer entred was : ");
+  print(i);
+  print("\n");
+  print("The string entred was : ");
+  print(s);
+  print("\n");
+  print("The boolean entred was : ");
+  print(b);
+  print("\n");
+end

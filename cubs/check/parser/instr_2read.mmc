@@ -1,0 +1,8 @@
+#!/bin/cub
+#5
+#--
+#--
+begin
+  read(a);
+  read(b);
+end

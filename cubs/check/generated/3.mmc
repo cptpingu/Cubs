@@ -1,0 +1,24 @@
+#!/bin/cub
+#5
+#--
+#--
+	var id : string;
+	var id, id, id : string;
+
+		function FuncId() : integer;
+	begin
+		id = id < 883;
+		FuncId();
+	end
+
+		function FuncId(id : integer; id : integer; id : string; id, id, id : string) : boolean;
+	begin
+		FuncId(FuncId() - id, FuncId() != FuncId(), FuncId(FuncId()) % FuncId(FuncId(648 <= id, FuncId() != "String Expression") >= id, id + FuncId(), id % FuncId(), FuncId("String Expression" >= id), FuncId()), FuncId("String Expression" * id) * FuncId());
+	end
+
+
+	begin
+		FuncId(776 / FuncId(888, "String Expression", FuncId(FuncId())));
+		id = false * FuncId(id, FuncId());
+	end
+

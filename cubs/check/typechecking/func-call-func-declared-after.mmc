@@ -1,0 +1,16 @@
+function foo(a : integer) : integer;
+begin
+  a = pouet("toto");
+  return a;
+end
+
+function pouet(s : string) : integer;
+begin
+  s = "tata";
+  return 34;
+end
+
+begin
+  foo(45);
+  pouet("titi");
+end

@@ -1,0 +1,14 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+
+
+begin
+  a = 0;
+  if 1 <= 30 then
+  begin
+      a = 138;
+  end
+end

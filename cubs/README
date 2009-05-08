@@ -1,0 +1,146 @@
+MiniCompiler is a compiler/interpretor project. It can check error and execute a pseudo pascal code source.
+
+For now, the project isn't finished. The compiler will can handle scope, recursivity, overloading, debugging, code optimization, and show all part of a source code check process.
+
+You can contact me at: cptpingu@gmail.com
+
+==== New version of the grammar =====================
+
+Based on Pascal grammar, to be sure there is no grammar errors.
+
+===========================================================
+
+program ::= [declarations] [funcs] [compound_instruction]
+
+declarations := declaration
+              | declaration declarations
+
+declaration ::= "var" declaration_body ";"
+
+declaration_body ::= ids ":" type
+
+ids ::= id
+      | id "," ids
+
+funcs ::= func
+        | func funcs
+
+func ::= header_func compound_instruction
+       | header_func declarations compound_instruction
+
+header_func ::= "function" idfunc "(" [arguments] ")" ":" type ";"
+
+arguments ::= argument
+	    | argument ";" arguments
+
+argument ::= declaration_body
+           | declaration_body ";" argument
+
+compound_instruction ::= "begin" "end"
+		       | "begin" instructions "end"
+
+instructions ::= instruction
+               | instruction instructions
+
+instruction ::= affect ";"
+              | call_func ";"
+              | compound_instruction
+              | if
+              | while
+              | return ";"
+              | exit ";"
+              | builtin_print ";"
+              | builtin_read ";"
+
+affect ::= id "=" expression
+
+return ::= "return" expression
+exit ::= "return" expression
+
+builtin_print ::= "print" "(" expression ")" /* builtin */
+
+builtin_read ::= "read" "(" id ")" /* builtin */
+
+if ::= "if" expression "then" compound_instruction
+     | "if" expression "then" compound_instruction "else" compound_instruction
+
+while ::= "while" cond "do" compound_instruction
+
+call_func ::= idfunc "(" ")"
+            | idfunc "(" expressions ")"
+
+expressions ::= expression
+              | expression "," expressions
+
+expression ::= operation
+
+operation ::= factor symb factor
+            | factor /* operation with no right factor */
+	    | "-" factor /* left factor = 0 */
+
+factor ::= id
+         | call_func
+         | number
+	 | stringexpr
+	 | boolean
+         | "(" expression ")"
+
+Sup ::= expression ">" expression
+Inf ::= expression "<" expression
+InfEqual ::= expression "<=" expression
+SupEqual ::= expression ">=" expression
+Equal ::= expression "==" expression
+Diff ::= expression "!=" expression
+
+
+id ::= [a-zA-Z]([a-zA-Z0-9_]*[a-zA-Z0-9])?
+type ::= "integer" | "string" | "boolean"
+symb ::= ">" | "<" | ">=" | "<=" | "!=" | "==" | "+" | "-" | "*" | "/" | "%"
+number ::= [0-9]+
+stringexpr ::= ".*"
+boolean ::= true | false
+
+=============================================================================================
+
+Example:
+
+var a, b, c : integer;
+var f : string;
+var truc : string;
+
+function nothing () : integer;
+begin
+end
+
+function my_func (a: integer; d,e,f:string) : integer;
+var local_a, local_b : integer;
+var local_f : string;
+begin
+  return 34;
+end
+
+function test_this_function (a: integer; d,e,f:string ) : integer;
+var local_a, local_b : integer;
+var local_f : string;
+begin
+  a = 34;
+  b = my_func(0, "hello", "str3", "str4");
+  nothing();
+  begin
+    if a == b then
+    begin
+      printf ("cooucou");
+      return "kikoo";
+    end
+  end
+  local_b = (55 * 56) + 37;
+  local_f = "cou" + "cou";
+end
+
+
+begin
+  truc = " et \\\\\\encor\\\e un \" \\un\\ test\tess\n";
+  print (test_this_function(42, "42", "quarante-deux", "Forty Two"));
+  // This is a comment test
+  return 0;
+end

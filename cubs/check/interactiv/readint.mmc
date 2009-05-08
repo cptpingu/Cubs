@@ -1,0 +1,8 @@
+#!/bin/cub
+#skip
+var a : integer;
+
+begin
+  read(a);
+  print(a);
+end

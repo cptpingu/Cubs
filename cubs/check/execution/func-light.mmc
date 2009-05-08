@@ -1,0 +1,18 @@
+#!/bin/cub
+#0
+#--
+#--
+function f (nb : integer) : integer;
+var tmp : integer;
+begin
+   if (nb <= 0) then
+   begin
+     return 0;
+   end
+   tmp = nb + f(nb - 1);
+   return tmp;
+end
+
+begin
+  f(3);
+end

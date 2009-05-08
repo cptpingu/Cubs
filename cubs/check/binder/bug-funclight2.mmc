@@ -1,0 +1,8 @@
+#!/bin/cub
+#5
+#--
+#--
+function f (nb : integer) : integer;
+begin
+   return factorielle(1);
+end

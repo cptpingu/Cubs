@@ -1,0 +1,31 @@
+#!/bin/cub
+#4
+#--
+#--
+function type test(type arg, type arg)
+  int a;
+  string truc = " et \\\\\\encor\\\e un \" \\un\\ test\tess\n";
+
+  if truc then
+    s = read(a);
+    print(s);
+  else
+   // Check for dangling else
+   kikoo
+  endif;
+
+  while truc == vrai do
+    a = a + b;
+  endwhile;
+
+  for a = 5 to i - 1 do
+    print("salut tout le monde");
+  endfor
+
+  return 0;
+
+endfunction;
+
+type truc = test(type arg, type arg);
+print(type);
+return 0;

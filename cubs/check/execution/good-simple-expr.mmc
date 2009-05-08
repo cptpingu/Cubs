@@ -1,0 +1,13 @@
+#!/bin/cub
+#0
+#--
+#--
+var a : integer;
+var b : string;
+var c : boolean;
+
+begin
+  a = 5 + 5;
+  b = "Kikoo" + " lol";
+  c = true;
+end

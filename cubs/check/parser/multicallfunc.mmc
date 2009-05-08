@@ -1,0 +1,9 @@
+#!/bin/cub
+#5
+#--
+#--
+begin
+ func(0);
+ func1(45);
+ func2(89);
+end

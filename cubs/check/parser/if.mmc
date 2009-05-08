@@ -1,0 +1,10 @@
+#!/bin/cub
+#4
+#--
+#--
+begin
+  if t then
+  begin
+	a = 0;
+  end;
+end

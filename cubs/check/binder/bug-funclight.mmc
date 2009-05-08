@@ -1,0 +1,16 @@
+#!/bin/cub
+#5
+#--
+#--
+function f (nb : integer) : integer;
+begin
+   if (nb <= 0) then
+   begin
+     return 0;
+   end
+   return nb + factorielle(nb - 1);
+end
+
+begin
+  f(3);
+end

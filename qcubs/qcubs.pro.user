@@ -87,7 +87,7 @@
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-pingu</value>
     <value type="QString" >PAGER=less</value>
     <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
-    <value type="QString" >PWD=/home/pingu</value>
+    <value type="QString" >PWD=/home/pingu/projects/qt/qcubs</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >SAVEHIST=1000</value>
     <value type="QString" >SESSION_MANAGER=local/igloo:/tmp/.ICE-unix/3917</value>
@@ -108,7 +108,7 @@
     <value type="QString" >XAUTHORITY=/home/pingu/.Xauthority</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
     <value type="QString" >XDG_SESSION_COOKIE=c42eae926f0a27ad9f5bd50046e4005a-1241796396.983754-1848016639</value>
-    <value type="QString" >_=/home/pingu/./qtcreator-1.1.0/bin/qtcreator</value>
+    <value type="QString" >_=/home/pingu/qtcreator-1.1.0/bin/qtcreator</value>
     <value type="QString" >__GL_YIELD=NOTHING</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
@@ -159,7 +159,7 @@
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-pingu</value>
     <value type="QString" >PAGER=less</value>
     <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
-    <value type="QString" >PWD=/home/pingu</value>
+    <value type="QString" >PWD=/home/pingu/projects/qt/qcubs</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >SAVEHIST=1000</value>
     <value type="QString" >SESSION_MANAGER=local/igloo:/tmp/.ICE-unix/3917</value>
@@ -180,7 +180,7 @@
     <value type="QString" >XAUTHORITY=/home/pingu/.Xauthority</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
     <value type="QString" >XDG_SESSION_COOKIE=c42eae926f0a27ad9f5bd50046e4005a-1241796396.983754-1848016639</value>
-    <value type="QString" >_=/home/pingu/./qtcreator-1.1.0/bin/qtcreator</value>
+    <value type="QString" >_=/home/pingu/qtcreator-1.1.0/bin/qtcreator</value>
     <value type="QString" >__GL_YIELD=NOTHING</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >

@@ -55,7 +55,7 @@ void
 QCubsEditor::lineNumberAreaPaintEvent(QPaintEvent* event)
 {
 	QPainter painter(_lineNumberArea);
-	painter.fillRect(event->rect(), Qt::lightGray);
+	painter.fillRect(event->rect(), QColor(240, 240, 240, 255));
 
 	QTextBlock block = firstVisibleBlock();
 	int blockNumber = block.blockNumber();
@@ -67,7 +67,7 @@ QCubsEditor::lineNumberAreaPaintEvent(QPaintEvent* event)
 		if (block.isVisible() && bottom >= event->rect().top())
 		{
 			QString number = QString::number(blockNumber + 1);
-			painter.setPen(Qt::black);
+			painter.setPen(Qt::lightGray);
 			painter.drawText(0, top, _lineNumberArea->width(),
 				fontMetrics().height(), Qt::AlignRight, number);
 		}
@@ -76,7 +76,7 @@ QCubsEditor::lineNumberAreaPaintEvent(QPaintEvent* event)
 		bottom = top + (int) blockBoundingRect(block).height();
 		++blockNumber;
 	}
- }
+}
 
 int
 QCubsEditor::lineNumberAreaWidth()

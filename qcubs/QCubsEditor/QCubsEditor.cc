@@ -16,15 +16,20 @@ QCubsEditor::QCubsEditor(const QString& text, QWidget* parent)
 void
 QCubsEditor::init()
 {
+	_lineNumberArea = new LineNumberWidget(Qt::red, this);
 	QFont font;
 	font.setFamily("Monospace");
 	font.setFixedPitch(true);
 	font.setPointSize(10);
-
 	setFont(font);
 	_highlighter = new CubsHighlighter(document());
 
-	connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(colorCurrentLine()));
+	connect(this, SIGNAL(blockCountChanged(int)), this, SLOT(updateLineNumberAreaWidth(int)));
+	connect(this, SIGNAL(updateRequest(const QRect&, int)), this, SLOT(updateLineNumberArea(const QRect&, int)));
+	connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(onCursorPositionChanged()));
+
+	updateLineNumberAreaWidth(0);
+	highlightCurrentLine();
 }
 
 QCubsEditor::~QCubsEditor()
@@ -32,7 +37,83 @@ QCubsEditor::~QCubsEditor()
 }
 
 void
-QCubsEditor::colorCurrentLine()
+QCubsEditor::resizeEvent(QResizeEvent* event)
+{
+	super::resizeEvent(event);
+	QRect cr = contentsRect();
+	_lineNumberArea->setGeometry(QRect(cr.left(), cr.top(),
+		lineNumberAreaWidth(), cr.height()));
+}
+
+void
+QCubsEditor::paintEvent(QPaintEvent* event)
+{
+	super::paintEvent(event);
+}
+
+void
+QCubsEditor::lineNumberAreaPaintEvent(QPaintEvent* event)
+{
+	QPainter painter(_lineNumberArea);
+	painter.fillRect(event->rect(), Qt::lightGray);
+
+	QTextBlock block = firstVisibleBlock();
+	int blockNumber = block.blockNumber();
+	int top = (int) blockBoundingGeometry(block).translated(contentOffset()).top();
+	int bottom = top + (int) blockBoundingRect(block).height();
+
+	while (block.isValid() && top <= event->rect().bottom())
+	{
+		if (block.isVisible() && bottom >= event->rect().top())
+		{
+			QString number = QString::number(blockNumber + 1);
+			painter.setPen(Qt::black);
+			painter.drawText(0, top, _lineNumberArea->width(),
+				fontMetrics().height(), Qt::AlignRight, number);
+		}
+		block = block.next();
+		top = bottom;
+		bottom = top + (int) blockBoundingRect(block).height();
+		++blockNumber;
+	}
+ }
+
+int
+QCubsEditor::lineNumberAreaWidth()
+{
+	int digits = 1;
+	int max = qMax(1, blockCount());
+	while (max >= 10)
+	{
+		max /= 10;
+		++digits;
+	}
+
+	int space = 3 + fontMetrics().width(QLatin1Char('9')) * digits;
+
+	return space;
+}
+
+void
+QCubsEditor::updateLineNumberAreaWidth(int /* newBlockCount */)
+{
+	setViewportMargins(lineNumberAreaWidth(), 0, 0, 0);
+}
+
+void
+QCubsEditor::updateLineNumberArea(const QRect& rect, int dy)
+{
+	if (dy)
+		_lineNumberArea->scroll(0, dy);
+	else
+		_lineNumberArea->update(0, rect.y(), _lineNumberArea->width(), rect.height());
+
+	if (rect.contains(viewport()->rect()))
+		updateLineNumberAreaWidth(0);
+}
+
+void
+QCubsEditor::highlightCurrentLine()
 {
 	QTextEdit::ExtraSelection highlight;
 	highlight.cursor = this->textCursor();
@@ -42,6 +123,34 @@ QCubsEditor::colorCurrentLine()
 	QList<QTextEdit::ExtraSelection> extras;
 	extras << highlight;
 	setExtraSelections(extras);
+}
+
+int
+QCubsEditor::getCurrentLine()
+{
+	QTextDocument *doc = this->document();
+	QTextBlock blockFound = doc->findBlock(this->textCursor().position());
+	QTextBlock blockPos = doc->begin();
+	int line = 1;
+	while (blockFound != blockPos)
+	{
+		blockPos = blockPos.next();
+		line++;
+	}
+	return line;
+}
+
+int
+QCubsEditor::getLineNumber()
+{
+	QTextDocument *doc = this->document();
+	return doc->lineCount();
+}
+
+void
+QCubsEditor::onCursorPositionChanged()
+{
+	highlightCurrentLine();
 }
 
 void
@@ -154,7 +263,7 @@ QCubsEditor::loadFile(const QString& fileName)
 
 	QTextStream in(&file);
 	QApplication::setOverrideCursor(Qt::WaitCursor);
-	setText(in.readAll());
+	setPlainText(in.readAll());
 	QApplication::restoreOverrideCursor();
 
 	setCurrentFile(fileName);

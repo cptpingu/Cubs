@@ -60,7 +60,7 @@
     <value type="QString" >BLOCK_SIZE=human-readable</value>
     <value type="QString" >COLORTERM=xterm</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-UDox24B0jF,guid=dc23e4eb9ee697c152ed5edd4a030913</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-MZypOrKJvg,guid=f91410c39f60f33be20bc7614a044f2f</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -70,9 +70,9 @@
     <value type="QString" >GDM_LANG=fr_FR.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=3980</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-767PRq/socket</value>
-    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-ghFzLG/S.gpg-agent:4083:1</value>
+    <value type="QString" >GNOME_KEYRING_PID=3904</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-ehf369/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-m0RpMD/S.gpg-agent:4007:1</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/pingu/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HISTFILE=/home/pingu/.zshhistory</value>
@@ -83,32 +83,32 @@
     <value type="QString" >LESS=-cex3M</value>
     <value type="QString" >LOGNAME=pingu</value>
     <value type="QString" >LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jpg=01;35:*.png=01;35:*.gif=01;35:*.bmp=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.png=01;35:*.mpg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35::*.c=0;33:*.cc=0;33:*.d=0;33:*.h=0;36:*.hh=0;36:*.hxx=0;36:*.pkg.sj=1;35:*.mxf=0;35:*.xml=0;34:</value>
-    <value type="QString" >OLDPWD=/home/pingu/projects/qt/qcubs</value>
+    <value type="QString" >OLDPWD=/home/pingu</value>
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-pingu</value>
     <value type="QString" >PAGER=less</value>
     <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
-    <value type="QString" >PWD=/home/pingu/projects/qt</value>
+    <value type="QString" >PWD=/home/pingu</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >SAVEHIST=1000</value>
-    <value type="QString" >SESSION_MANAGER=local/igloo:/tmp/.ICE-unix/3993</value>
+    <value type="QString" >SESSION_MANAGER=local/igloo:/tmp/.ICE-unix/3917</value>
     <value type="QString" >SHELL=/usr/bin/zsh</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >SOCKS5_PASSWD=/home/pingu/.socks</value>
     <value type="QString" >SOCKS5_USER=pingu</value>
-    <value type="QString" >SSH_AGENT_PID=4060</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-767PRq/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=3984</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-ehf369/socket.ssh</value>
     <value type="QString" >TERM=xterm</value>
     <value type="QString" >USER=pingu</value>
     <value type="QString" >USERNAME=pingu</value>
     <value type="QString" >VISUAL=emacs -nw</value>
     <value type="QString" >WATCH=all</value>
     <value type="QString" >WATCHFMT=%n has %a %l from %M</value>
-    <value type="QString" >WINDOWID=52429197</value>
+    <value type="QString" >WINDOWID=54526004</value>
     <value type="QString" >WINDOWPATH=7</value>
     <value type="QString" >XAUTHORITY=/home/pingu/.Xauthority</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=c42eae926f0a27ad9f5bd50046e4005a-1241712913.369479-414392718</value>
-    <value type="QString" >_=/home/pingu/qtcreator-1.1.0/bin/qtcreator</value>
+    <value type="QString" >XDG_SESSION_COOKIE=c42eae926f0a27ad9f5bd50046e4005a-1241796396.983754-1848016639</value>
+    <value type="QString" >_=/home/pingu/./qtcreator-1.1.0/bin/qtcreator</value>
     <value type="QString" >__GL_YIELD=NOTHING</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >
@@ -132,7 +132,7 @@
     <value type="QString" >BLOCK_SIZE=human-readable</value>
     <value type="QString" >COLORTERM=xterm</value>
     <value type="QString" >CVS_RSH=ssh</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-UDox24B0jF,guid=dc23e4eb9ee697c152ed5edd4a030913</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-MZypOrKJvg,guid=f91410c39f60f33be20bc7614a044f2f</value>
     <value type="QString" >DESKTOP_SESSION=default</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -142,9 +142,9 @@
     <value type="QString" >GDM_LANG=fr_FR.UTF-8</value>
     <value type="QString" >GDM_XSERVER_LOCATION=local</value>
     <value type="QString" >GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
-    <value type="QString" >GNOME_KEYRING_PID=3980</value>
-    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-767PRq/socket</value>
-    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-ghFzLG/S.gpg-agent:4083:1</value>
+    <value type="QString" >GNOME_KEYRING_PID=3904</value>
+    <value type="QString" >GNOME_KEYRING_SOCKET=/tmp/keyring-ehf369/socket</value>
+    <value type="QString" >GPG_AGENT_INFO=/tmp/seahorse-m0RpMD/S.gpg-agent:4007:1</value>
     <value type="QString" >GTK_MODULES=canberra-gtk-module</value>
     <value type="QString" >GTK_RC_FILES=/etc/gtk/gtkrc:/home/pingu/.gtkrc-1.2-gnome2</value>
     <value type="QString" >HISTFILE=/home/pingu/.zshhistory</value>
@@ -155,32 +155,32 @@
     <value type="QString" >LESS=-cex3M</value>
     <value type="QString" >LOGNAME=pingu</value>
     <value type="QString" >LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jpg=01;35:*.png=01;35:*.gif=01;35:*.bmp=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.png=01;35:*.mpg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35::*.c=0;33:*.cc=0;33:*.d=0;33:*.h=0;36:*.hh=0;36:*.hxx=0;36:*.pkg.sj=1;35:*.mxf=0;35:*.xml=0;34:</value>
-    <value type="QString" >OLDPWD=/home/pingu/projects/qt/qcubs</value>
+    <value type="QString" >OLDPWD=/home/pingu</value>
     <value type="QString" >ORBIT_SOCKETDIR=/tmp/orbit-pingu</value>
     <value type="QString" >PAGER=less</value>
     <value type="QString" >PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
-    <value type="QString" >PWD=/home/pingu/projects/qt</value>
+    <value type="QString" >PWD=/home/pingu</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >SAVEHIST=1000</value>
-    <value type="QString" >SESSION_MANAGER=local/igloo:/tmp/.ICE-unix/3993</value>
+    <value type="QString" >SESSION_MANAGER=local/igloo:/tmp/.ICE-unix/3917</value>
     <value type="QString" >SHELL=/usr/bin/zsh</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >SOCKS5_PASSWD=/home/pingu/.socks</value>
     <value type="QString" >SOCKS5_USER=pingu</value>
-    <value type="QString" >SSH_AGENT_PID=4060</value>
-    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-767PRq/socket.ssh</value>
+    <value type="QString" >SSH_AGENT_PID=3984</value>
+    <value type="QString" >SSH_AUTH_SOCK=/tmp/keyring-ehf369/socket.ssh</value>
     <value type="QString" >TERM=xterm</value>
     <value type="QString" >USER=pingu</value>
     <value type="QString" >USERNAME=pingu</value>
     <value type="QString" >VISUAL=emacs -nw</value>
     <value type="QString" >WATCH=all</value>
     <value type="QString" >WATCHFMT=%n has %a %l from %M</value>
-    <value type="QString" >WINDOWID=52429197</value>
+    <value type="QString" >WINDOWID=54526004</value>
     <value type="QString" >WINDOWPATH=7</value>
     <value type="QString" >XAUTHORITY=/home/pingu/.Xauthority</value>
     <value type="QString" >XDG_DATA_DIRS=/usr/local/share/:/usr/share/:/usr/share/gdm/</value>
-    <value type="QString" >XDG_SESSION_COOKIE=c42eae926f0a27ad9f5bd50046e4005a-1241712913.369479-414392718</value>
-    <value type="QString" >_=/home/pingu/qtcreator-1.1.0/bin/qtcreator</value>
+    <value type="QString" >XDG_SESSION_COOKIE=c42eae926f0a27ad9f5bd50046e4005a-1241796396.983754-1848016639</value>
+    <value type="QString" >_=/home/pingu/./qtcreator-1.1.0/bin/qtcreator</value>
     <value type="QString" >__GL_YIELD=NOTHING</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList" >

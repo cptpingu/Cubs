@@ -8,11 +8,13 @@ SOURCES += main.cc \
     QCubsEditor/CubsHighlighter.cc \
     MainWindow/MainWindow.cc \
     MainWindow/MainWindowBuild.cc \
-    DialogWait/DialogWait.cc
+    DialogWait/DialogWait.cc \
+    QCubsEditor/LineNumberWidget.cc
 HEADERS += MainWindow/MainWindow.hh \
     QCubsEditor/QCubsEditor.hh \
     QCubsEditor/CubsHighlighter.hh \
-    DialogWait/DialogWait.hh
+    DialogWait/DialogWait.hh \
+    QCubsEditor/LineNumberWidget.hh
 FORMS += MainWindow/MainWindow.ui \
     DialogWait/DialogWait.ui
 debug:CONFIG += console

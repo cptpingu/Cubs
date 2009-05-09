@@ -1,24 +1,33 @@
-#ifndef QCUBSEDITOR_HH
-#define QCUBSEDITOR_HH
+#ifndef QCUBSEDITOR_HH_
+# define QCUBSEDITOR_HH_
 
-#include <QTextEdit>
-#include "CubsHighlighter.hh"
+# include <QPlainTextEdit>
+# include <QtGui>
+# include "CubsHighlighter.hh"
+# include "LineNumberWidget.hh"
 
-class QCubsEditor : public QTextEdit
+class QCubsEditor : public QPlainTextEdit
 {
 	Q_OBJECT
 
-	typedef QTextEdit super;
+	typedef QPlainTextEdit super;
 public:
 	explicit QCubsEditor(QWidget* parent = 0);
 	explicit QCubsEditor(const QString& text, QWidget* parent = 0);
 	virtual ~QCubsEditor();
 	bool getSavedFile(QString& file);
+	void lineNumberAreaPaintEvent(QPaintEvent *event);
+	int lineNumberAreaWidth();
+	int getCurrentLine();
+	int getLineNumber();
 
 protected:
 	virtual void changeEvent(QEvent* e);
 	virtual void init();
 	virtual void closeEvent(QCloseEvent* event);
+	virtual void paintEvent(QPaintEvent* event);
+	virtual void resizeEvent(QResizeEvent* event);
+	virtual void highlightCurrentLine();
 
 public slots:
 	void newFile();
@@ -26,7 +35,9 @@ public slots:
 	bool save();
 	bool saveAs();
 	void documentWasModified();
-	void colorCurrentLine();
+	void onCursorPositionChanged();
+	void updateLineNumberAreaWidth(int newBlockCount);
+	void updateLineNumberArea(const QRect&, int);
 
 	bool maybeSave();
 	bool loadFile(const QString& fileName);
@@ -37,6 +48,7 @@ public slots:
 protected:
 	QString _curFile;
 	CubsHighlighter* _highlighter;
+	LineNumberWidget* _lineNumberArea;
 };
 
-#endif // QCUBSEDITOR_HH
+#endif /* !QCUBSEDITOR_HH_ */

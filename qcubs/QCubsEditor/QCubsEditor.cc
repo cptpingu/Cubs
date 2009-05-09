@@ -23,10 +23,25 @@ QCubsEditor::init()
 
 	setFont(font);
 	_highlighter = new CubsHighlighter(document());
+
+	connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(colorCurrentLine()));
 }
 
 QCubsEditor::~QCubsEditor()
 {
+}
+
+void
+QCubsEditor::colorCurrentLine()
+{
+	QTextEdit::ExtraSelection highlight;
+	highlight.cursor = this->textCursor();
+	highlight.format.setProperty(QTextFormat::FullWidthSelection, true);
+	highlight.format.setBackground(QColor(233, 243, 255, 255));
+
+	QList<QTextEdit::ExtraSelection> extras;
+	extras << highlight;
+	setExtraSelections(extras);
 }
 
 void

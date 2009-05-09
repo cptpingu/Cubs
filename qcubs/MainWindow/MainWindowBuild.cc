@@ -6,7 +6,8 @@ void
 MainWindow::setupActionBuild()
 {
 	connect(ui->actionCompile, SIGNAL(triggered()), this, SLOT(onCompile()));
-	connect(&_process, SIGNAL(readyReadStandardOutput()), this, SLOT(onProcessOutput()));
+	connect(&_process, SIGNAL(readyReadStandardOutput()), this, SLOT(onProcessStandardOutput()));
+	connect(&_process, SIGNAL(readyReadStandardError()), this, SLOT(onProcessStandardError()));
 	connect(&_process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(onProcessFinished()));
 	connect(&_process, SIGNAL(error(QProcess::ProcessError)), this, SLOT(onProcessError()));
 }
@@ -42,32 +43,36 @@ void
 MainWindow::compile(const QString& fileName)
 {
 	QString exe = "/home/pingu/projects/cubs/cubs/minicompil";
-	_process.setReadChannelMode(QProcess::MergedChannels);
-	//_process.start(exe, QStringList() << "-X" << fileName);
-	_process.start("yes");
+	//_process.setReadChannelMode(QProcess::MergedChannels);
+	_process.start(exe, QStringList() << "-X" << fileName);
 	_dialogWait.setActiveProcess(_process);
 	_dialogWait.show();
 }
 
 void
-MainWindow::onProcessOutput()
+MainWindow::onProcessStandardOutput()
 {
-	QString s = _process.readAllStandardOutput () + _process.readAllStandardError();
+	QString s = _process.readAllStandardOutput () ;
+	//OutputWin::self()->text_console->verticalScrollBar()->setValue(OutputWin::self()->text_console->verticalScrollBar()->maximum());
+}
+
+void
+MainWindow::onProcessStandardError()
+{
+	QString s = _process.readAllStandardError();
 	QStringList list2 = s.split("\n", QString::SkipEmptyParts);
 	foreach (QString line, list2)
-	{
-		QTableWidgetItem* lineItem = new QTableWidgetItem(line.section(':', 0, 0));
-		QTableWidgetItem* msgItem = new QTableWidgetItem(line.section(':', 1));
-		addErrorLine(lineItem, msgItem);
-	}
-
-	//OutputWin::self()->text_console->verticalScrollBar()->setValue(OutputWin::self()->text_console->verticalScrollBar()->maximum());
+		if (line.contains("Line ", Qt::CaseInsensitive))
+		{
+			QTableWidgetItem* lineItem = new QTableWidgetItem(line.section(':', 0, 0).remove("Line "));
+			QTableWidgetItem* msgItem = new QTableWidgetItem(line.section(':', 1));
+			addErrorLine(lineItem, msgItem);
+		}
 }
 
 void
 MainWindow::onProcessFinished()
 {
-	//QMessageBox::about(this, tr("About Application"), tr("<b>Finished</b> "));
 	_dialogWait.hide();
 }
 

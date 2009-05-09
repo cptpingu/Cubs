@@ -44,9 +44,10 @@ MainWindow::setupAction()
 	connect(ui->actionAbout, SIGNAL(triggered()), this, SLOT(onAbout()));
 	connect(ui->actionAboutQt, SIGNAL(triggered()), this, SLOT(onAboutQt()));
 
-	// Bind to current textEdit
 	connect(ui->textEdit, SIGNAL(copyAvailable(bool)), ui->actionCut, SLOT(setEnabled(bool)));
 	connect(ui->textEdit, SIGNAL(copyAvailable(bool)), ui->actionCopy, SLOT(setEnabled(bool)));
+
+	connect(ui->lstError, SIGNAL(cellDoubleClicked(int,int)), this, SLOT(onLstErrorDoubleClick(int, int)));
 	setupActionBuild();
 }
 
@@ -61,6 +62,18 @@ void
 MainWindow::onClose()
 {
 	// Close a tabulation
+}
+
+void
+MainWindow::onLstErrorDoubleClick(int x, int)
+{
+	int line = ui->lstError->item(x, 1)->text().toInt();
+	//QMessageBox::about(this, tr("About Application"), msg);
+	QTextCursor cur = ui->textEdit->textCursor();
+	cur.movePosition(QTextCursor::Start);
+	cur.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor, line);
+	ui->textEdit->setTextCursor(cur);
+	ui->textEdit->ensureCursorVisible();
 }
 
 void

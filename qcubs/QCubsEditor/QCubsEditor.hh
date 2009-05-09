@@ -26,6 +26,7 @@ public slots:
 	bool save();
 	bool saveAs();
 	void documentWasModified();
+	void colorCurrentLine();
 
 	bool maybeSave();
 	bool loadFile(const QString& fileName);

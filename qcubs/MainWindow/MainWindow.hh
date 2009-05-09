@@ -30,6 +30,7 @@ private:
 
 private slots:
 	// MainWindow Action
+	void onLstErrorDoubleClick(int x, int y);
 	void onOpen();
 	void onClose();
 	void onNew();
@@ -43,7 +44,8 @@ private slots:
 	void onAboutQt();
 	// MainWindowBuild Action
 	void onCompile();
-	void onProcessOutput();
+	void onProcessStandardOutput();
+	void onProcessStandardError();
 	void onProcessFinished();
 	void onProcessError();
 

@@ -58,6 +58,8 @@ MainWindow::onProcessStandardOutput()
 	QString s = _process.readAllStandardOutput () ;
 }
 
+// Esprit literie 3 arsene geraud
+// Porte de montreuil
 void
 MainWindow::onProcessStandardError()
 {

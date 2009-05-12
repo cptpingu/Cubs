@@ -183,4 +183,6 @@ MainWindow::onShowOnlyEditor()
 {
 	ui->lstError->setVisible(false);
 	ui->textEdit->setVisible(true);
+	ui->actionShowCompileOutput->setChecked(false);
+	ui->actionShowEditor->setChecked(true);
 }

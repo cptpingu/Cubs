@@ -357,6 +357,10 @@
    </property>
   </action>
   <action name="actionAbout">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/about.png</normaloff>images/about.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;About</string>
    </property>
@@ -368,6 +372,10 @@
    </property>
   </action>
   <action name="actionAboutQt">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/about.png</normaloff>images/about.png</iconset>
+   </property>
    <property name="text">
     <string>About &amp;Qt</string>
    </property>
@@ -379,10 +387,17 @@
    </property>
   </action>
   <action name="actionCompile">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/compile.png</normaloff>images/compile.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Compile</string>
    </property>
    <property name="toolTip">
+    <string>Compile this file</string>
+   </property>
+   <property name="statusTip">
     <string>Compile this file</string>
    </property>
    <property name="shortcut">
@@ -390,10 +405,17 @@
    </property>
   </action>
   <action name="actionCompileAndRun">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/compilerun.png</normaloff>images/compilerun.png</iconset>
+   </property>
    <property name="text">
     <string>C&amp;ompile and Run</string>
    </property>
    <property name="toolTip">
+    <string>Compile this file and run generated binary</string>
+   </property>
+   <property name="statusTip">
     <string>Compile this file and run generated binary</string>
    </property>
    <property name="shortcut">
@@ -401,10 +423,17 @@
    </property>
   </action>
   <action name="actionInterpret">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/interpret.png</normaloff>images/interpret.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Interpret</string>
    </property>
    <property name="toolTip">
+    <string>Execute the file using the Cubs interpretor</string>
+   </property>
+   <property name="statusTip">
     <string>Execute the file using the Cubs interpretor</string>
    </property>
    <property name="shortcut">
@@ -418,8 +447,18 @@
    <property name="checked">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/window-editor.png</normaloff>images/window-editor.png</iconset>
+   </property>
    <property name="text">
     <string>Show Editor</string>
+   </property>
+   <property name="toolTip">
+    <string>Show the editor</string>
+   </property>
+   <property name="statusTip">
+    <string>Show the editor</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+&amp;</string>
@@ -429,18 +468,35 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/window-error.png</normaloff>images/window-error.png</iconset>
+   </property>
    <property name="text">
     <string>Show Compile Output</string>
+   </property>
+   <property name="toolTip">
+    <string>Show the compile output</string>
+   </property>
+   <property name="statusTip">
+    <string>Show the compile output</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+É</string>
    </property>
   </action>
   <action name="actionShowOnlyEditor">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/window-editor-only.png</normaloff>images/window-editor-only.png</iconset>
+   </property>
    <property name="text">
     <string>Show Only Editor</string>
    </property>
    <property name="toolTip">
+    <string>Hide all window except editor</string>
+   </property>
+   <property name="statusTip">
     <string>Hide all window except editor</string>
    </property>
    <property name="shortcut">

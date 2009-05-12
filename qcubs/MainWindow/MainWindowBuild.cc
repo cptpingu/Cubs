@@ -34,6 +34,9 @@ MainWindow::addErrorLine(QTableWidgetItem* line, QTableWidgetItem* msg)
 void
 MainWindow::onCompile()
 {
+	ui->lstError->clearContents();
+	ui->lstError->setRowCount(0);
+	ui->lstError->setVisible(true);
 	QString fileName;
 	if (ui->textEdit->getSavedFile(fileName))
 		compile(fileName);
@@ -53,15 +56,14 @@ void
 MainWindow::onProcessStandardOutput()
 {
 	QString s = _process.readAllStandardOutput () ;
-	//OutputWin::self()->text_console->verticalScrollBar()->setValue(OutputWin::self()->text_console->verticalScrollBar()->maximum());
 }
 
 void
 MainWindow::onProcessStandardError()
 {
 	QString s = _process.readAllStandardError();
-	QStringList list2 = s.split("\n", QString::SkipEmptyParts);
-	foreach (QString line, list2)
+	QStringList list = s.split("\n", QString::SkipEmptyParts);
+	foreach (QString line, list)
 		if (line.contains("Line ", Qt::CaseInsensitive))
 		{
 			QTableWidgetItem* lineItem = new QTableWidgetItem(line.section(':', 0, 0).remove("Line "));

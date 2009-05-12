@@ -2,13 +2,13 @@
 #include "QCubsEditor.hh"
 
 QCubsEditor::QCubsEditor(QWidget* parent)
- : super(parent)
+ : super(parent), _parent(parent)
 {
 	init();
 }
 
 QCubsEditor::QCubsEditor(const QString& text, QWidget* parent)
- : super(text, parent)
+ : super(text, parent), _parent(parent)
 {
 	init();
 }
@@ -27,6 +27,7 @@ QCubsEditor::init()
 	connect(this, SIGNAL(blockCountChanged(int)), this, SLOT(updateLineNumberAreaWidth(int)));
 	connect(this, SIGNAL(updateRequest(const QRect&, int)), this, SLOT(updateLineNumberArea(const QRect&, int)));
 	connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(onCursorPositionChanged()));
+	connect(this, SIGNAL(textChanged()), this, SLOT(documentWasModified()));
 
 	updateLineNumberAreaWidth(0);
 	highlightCurrentLine();
@@ -160,18 +161,6 @@ QCubsEditor::changeEvent(QEvent* e)
 }
 
 void
-QCubsEditor::closeEvent(QCloseEvent* event)
-{
-	if (maybeSave())
-	{
-		//writeSettings();
-		event->accept();
-	}
-	else
-		event->ignore();
-}
-
-void
 QCubsEditor::newFile()
 {
 	if (maybeSave())
@@ -226,13 +215,14 @@ QCubsEditor::saveAs()
 void
 QCubsEditor::documentWasModified()
 {
-	setWindowModified(document()->isModified());
+	if (_parent)
+		_parent->setWindowModified(document()->isModified());
 }
 
 bool
 QCubsEditor::maybeSave()
 {
-	if (this->document()->isModified())
+	if (document()->isModified())
 	{
 		int ret = QMessageBox::warning(this, tr("Application"),
 					 tr("The document has been modified.\n"
@@ -297,7 +287,8 @@ QCubsEditor::setCurrentFile(const QString& fileName)
 {
 	_curFile = fileName;
 	document()->setModified(false);
-	setWindowModified(false);
+	if (_parent)
+		_parent->setWindowModified(false);
 
 	QString shownName;
 	if (_curFile.isEmpty())
@@ -305,7 +296,8 @@ QCubsEditor::setCurrentFile(const QString& fileName)
 	else
 		shownName = strippedName(_curFile);
 
-	setWindowTitle(tr("%1[*] - %2").arg(shownName).arg(tr("Application")));
+	if (_parent)
+		_parent->setWindowTitle(tr("%1[*] - %2").arg(shownName).arg(tr("Application")));
 }
 
 QString

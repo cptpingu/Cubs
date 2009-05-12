@@ -27,10 +27,14 @@ private:
 	void setupEditor();
 	void setupAction();
 	void setupActionBuild();
+	void readSettings();
+	void writeSettings();
+	virtual void closeEvent(QCloseEvent* event);
 
 private slots:
-	// MainWindow Action
+	// QCubsEdit Action
 	void onLstErrorDoubleClick(int x, int y);
+	// MainWindow Action
 	void onOpen();
 	void onClose();
 	void onNew();
@@ -42,6 +46,9 @@ private slots:
 	void onPaste();
 	void onAbout();
 	void onAboutQt();
+	void onShowEditor();
+	void onShowCompileOutput();
+	void onShowOnlyEditor();
 	// MainWindowBuild Action
 	void onCompile();
 	void onProcessStandardOutput();

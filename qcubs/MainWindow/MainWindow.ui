@@ -42,10 +42,13 @@
          <height>100</height>
         </size>
        </property>
+       <property name="acceptDrops">
+        <bool>true</bool>
+       </property>
       </widget>
       <widget class="QTableWidget" name="lstError">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -54,6 +57,12 @@
         <size>
          <width>0</width>
          <height>50</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
         </size>
        </property>
        <property name="editTriggers">
@@ -162,9 +171,18 @@
     <addaction name="actionCompile"/>
     <addaction name="menu_Run"/>
    </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>&amp;Window</string>
+    </property>
+    <addaction name="actionShowEditor"/>
+    <addaction name="actionShowCompileOutput"/>
+    <addaction name="actionShowOnlyEditor"/>
+   </widget>
    <addaction name="menuMenu"/>
    <addaction name="menuEdit"/>
    <addaction name="menu_Build"/>
+   <addaction name="menuWindow"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QToolBar" name="toolBarFile">
@@ -391,6 +409,45 @@
    </property>
    <property name="shortcut">
     <string>F11</string>
+   </property>
+  </action>
+  <action name="actionShowEditor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Editor</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+&amp;</string>
+   </property>
+  </action>
+  <action name="actionShowCompileOutput">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Compile Output</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+É</string>
+   </property>
+  </action>
+  <action name="actionShowOnlyEditor">
+   <property name="text">
+    <string>Show Only Editor</string>
+   </property>
+   <property name="toolTip">
+    <string>Hide all window except editor</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
    </property>
   </action>
  </widget>

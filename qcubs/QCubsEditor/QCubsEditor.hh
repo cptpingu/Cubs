@@ -20,11 +20,15 @@ public:
 	int lineNumberAreaWidth();
 	int getCurrentLine();
 	int getLineNumber();
+	bool maybeSave();
+	bool loadFile(const QString& fileName);
+	bool saveFile(const QString& fileName);
+	void setCurrentFile(const QString& fileName);
+	static QString strippedName(const QString& fullFileName);
 
 protected:
 	virtual void changeEvent(QEvent* e);
 	virtual void init();
-	virtual void closeEvent(QCloseEvent* event);
 	virtual void paintEvent(QPaintEvent* event);
 	virtual void resizeEvent(QResizeEvent* event);
 	virtual void highlightCurrentLine();
@@ -39,13 +43,8 @@ public slots:
 	void updateLineNumberAreaWidth(int newBlockCount);
 	void updateLineNumberArea(const QRect&, int);
 
-	bool maybeSave();
-	bool loadFile(const QString& fileName);
-	bool saveFile(const QString& fileName);
-	void setCurrentFile(const QString& fileName);
-	static QString strippedName(const QString& fullFileName);
-
 protected:
+	QWidget* _parent;
 	QString _curFile;
 	CubsHighlighter* _highlighter;
 	LineNumberWidget* _lineNumberArea;

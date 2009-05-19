@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 	readSettings();
 	setupEditor();
 	setupAction();
+	setWindowTitle("Qcubs");
 }
 
 MainWindow::~MainWindow()
@@ -158,6 +159,30 @@ MainWindow::onPaste()
 void
 MainWindow::onAbout()
 {
+	static const QString about =
+		"<h3>QCubs 0.2</h3>"
+		"<u>Authors:</u>"
+		"<ul>"
+		"  <li>CptPingu (<a href=\"mailto:cptpingu@gmail.com\">cptpingu@gmail.com</a>)</li>"
+		"</ul>"
+		"<hr />"
+		"<h3>cubs 1.0 </h3>"
+		"<u>Authors:</u>"
+		"<ul>"
+		"  <li>CptPingu (<a href=\"mailto:cptpingu@gmail.com\">cptpingu@gmail.com</a>)</li>"
+		"</ul>"
+		"<hr />"
+		"<h3>Thanks to </h3>"
+		"<ul>"
+		"  <li>No one yet :p</li>"
+		"</ul>"
+		"<hr />"
+		"Homepage:"
+		"<a href=\"http://my-trac.assembla.com/Cubs2\">"
+		"  http://my-trac.assembla.com/Cubs2"
+		"</a>.";
+
+	QMessageBox::about(this, "About QCubs", about);
 }
 
 void

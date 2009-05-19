@@ -275,7 +275,7 @@ QCubsEditor::saveFile(const QString& fileName)
 
 	QTextStream out(&file);
 	QApplication::setOverrideCursor(Qt::WaitCursor);
-	out << this->Plain;
+	out << this->toPlainText();
 	QApplication::restoreOverrideCursor();
 
 	setCurrentFile(fileName);

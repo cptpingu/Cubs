@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
 	setupEditor();
 	setupAction();
 	setWindowTitle("Qcubs");
+	QIcon icon("images/tigrou.jpg");
+	setWindowIcon(icon);
 }
 
 MainWindow::~MainWindow()
